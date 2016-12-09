@@ -6,12 +6,13 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { FormNewUserComponent } from './form-new-user/form-new-user.component';
 import { NewUserService  } from './new-user.service';
-
+import { UserInfoComponent } from './user-info/user-info.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FormNewUserComponent
+    FormNewUserComponent,
+    UserInfoComponent
   ],
   imports: [
     BrowserModule,

@@ -9,6 +9,9 @@ import { Component } from '@angular/core';
     </h1>
     <app-form-new-user></app-form-new-user>
   </div>
+  <div>
+    <app-user-info></app-user-info>
+  </div>
   `,
   styleUrls: ['./app.component.css']
 })

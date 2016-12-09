@@ -1,15 +1,21 @@
-import { Injectable, Output, EventEmitter } from '@angular/core';
+import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs/Subject';
 
 @Injectable()
 export class NewUserService {
 
-  user;
+  subject: Subject<any>;
 
-  @Output() newAccount = new EventEmitter<any>();
+  constructor() {
+    this.subject = new Subject<any>();
+  }
 
   registerNewUser(data: any) {
-    this.user = data;
-    this.newAccount.emit(data);
-    console.log(JSON.stringify(data));
+    this.subject.next(data);
   }
+
+  getStream() {
+    return this.subject;
+  }
+
 }
