@@ -2,7 +2,7 @@
   "name": "kitchen-sink-example",
   "scripts": {
     "start": "webpack-dashboard -- webpack-dev-server --display-error-details --display-cached",
-    "build": "webpack --display-error-details --display-cached"
+    "build": "webpack --config webpack.prod.config.js -p --display-error-details --display-cached"
   },
   "devDependencies": {
     "@types/node": "^6.0.48",
