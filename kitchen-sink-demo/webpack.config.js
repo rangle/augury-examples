@@ -12,7 +12,7 @@ module.exports = {
   },
 
   entry: {
-    app: './source/app.ts',
+    app: './src/app.ts',
     vendor: [
       'core-js',
       'reflect-metadata',
@@ -26,7 +26,7 @@ module.exports = {
   },
 
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'app'),
     filename: '[name].[hash].bundle.js',
     publicPath: "/",
     sourceMapFilename: '[name].[hash].bundle.js.map',
@@ -42,7 +42,7 @@ module.exports = {
   plugins: [
     new webpack.optimize.CommonsChunkPlugin('vendor', '[name].[hash].bundle.js'),
     new HtmlWebpackPlugin({
-      template: './source/index.html',
+      template: './src/index.html',
       inject: 'body',
       minify: false
     }),
@@ -70,7 +70,7 @@ module.exports = {
   devServer: {
     inline: true,
     colors: true,
-    contentBase: './dist',
+    contentBase: './app',
     publicPath: '/'
   }
 }
