@@ -3,8 +3,8 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
-  <div class="clearfix">
-    <h1 class="ba br4 p2 pl3 mb3 bg-purple white">
+  <div class="cf">
+    <h1 class="ba br4 p2 pl3 bg-purple white">
       {{title}}
     </h1>
     <app-form-new-user></app-form-new-user>
