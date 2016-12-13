@@ -5,7 +5,7 @@ import { NewUserService } from '../new-user.service';
   selector: 'app-form-new-user',
   template: `
     <form #formRef="ngForm">
-      <div class="dt dt--fixed w-50">
+      <div class="dt dt--fixed w-50 ba pt2">
 
         <div class="dt dt--fixed">
           <label for="name" class="fl w-20 tr pr2 mb2 ">Name:</label>
@@ -23,7 +23,7 @@ import { NewUserService } from '../new-user.service';
           <label for="password" class="fl w-20 tr pr2 mb2">Password:</label>
           <input type="password" id="password" name="password" ngModel required class="fl w-25 mb2"/>
           <label for="surname" class="fl w-20 tr pr2 mb2">&nbsp;</label>
-          <button (click)="onSubmit(formRef.value)" [disabled]="!formRef.valid" class="fl w-25">Create</button>
+          <button (click)="onSubmit(formRef.value); formRef.reset();" [disabled]="!formRef.valid" class="fl w-25">Create</button>
         </div>
 
       </div>

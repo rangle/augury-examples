@@ -7,7 +7,10 @@ import { Component } from '@angular/core';
     <div class="ba br4 p2 pl3 mb3 bg-purple white">
       <h1>{{title}}</h1>
     </div>
+    <div>
     <app-form-new-user></app-form-new-user>
+    </div>
+
     <div>
       <app-user-info></app-user-info>
     </div>
