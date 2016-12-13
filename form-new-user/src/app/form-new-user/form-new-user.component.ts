@@ -5,7 +5,7 @@ import { NewUserService } from '../new-user.service';
   selector: 'app-form-new-user',
   template: `
     <form #formRef="ngForm">
-      <div class="dt dt--fixed w-50 ba pt2">
+      <div class="dt dt--fixed w-100 ba pt2">
 
         <div class="dt dt--fixed">
           <label for="name" class="fl w-20 tr pr2 mb2 ">Name:</label>
