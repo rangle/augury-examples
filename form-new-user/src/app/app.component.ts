@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
       <h1>{{title}}</h1>
     </div>
     <div class="center">
-    <app-form-new-user></app-form-new-user>
+      <app-form-new-user></app-form-new-user>
     </div>
     <div class="pt3">
       <app-user-info></app-user-info>
