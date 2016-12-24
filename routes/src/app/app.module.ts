@@ -21,7 +21,8 @@ import { ParksComponent } from './parks/parks.component';
     RouterModule.forRoot([
       {
         path: '',
-        component: HomeComponent
+        component: HomeComponent,
+        pathMatch: 'full'
       },
       {
         path: 'parks',
