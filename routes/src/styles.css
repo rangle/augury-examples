@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/tachyons/css/tachyons.min.css";
+
+:root {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background: #f1e0ff;
+}
