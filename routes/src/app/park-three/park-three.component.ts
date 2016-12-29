@@ -3,9 +3,9 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-park-three',
   template: `
-    <p>
-      park-three Works!
-    </p>
+  <div>
+    <img src="../../assets/bloordale-toronto-park.jpg" width="600" height="350" />
+  </div>
   `,
   styles: []
 })
