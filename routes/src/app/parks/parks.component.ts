@@ -3,9 +3,11 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-parks',
   template: `
-    <p>
-      parks Works!
-    </p>
+  <h1>National Parks</h1>
+  <a [routerLink]="{outlets: { parkit: ['park1']}}">Park 1</a>
+  <a [routerLink]="{outlets: { parkit: ['park2']}}">Park 2</a>
+  <a [routerLink]="{outlets: { parkit: ['park3']}}">Park 3</a>
+  <router-outlet name="parkit"></router-outlet>
   `,
   styles: []
 })

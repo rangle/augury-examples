@@ -7,12 +7,18 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ParksComponent } from './parks/parks.component';
+import { ParkOneComponent } from './park-one/park-one.component';
+import { ParkTwoComponent } from './park-two/park-two.component';
+import { ParkThreeComponent } from './park-three/park-three.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ParksComponent
+    ParksComponent,
+    ParkOneComponent,
+    ParkTwoComponent,
+    ParkThreeComponent
   ],
   imports: [
     BrowserModule,
@@ -20,13 +26,34 @@ import { ParksComponent } from './parks/parks.component';
     HttpModule,
     RouterModule.forRoot([
       {
+        path: 'home',
+        component: HomeComponent
+      },
+      {
         path: '',
-        component: HomeComponent,
+        redirectTo: 'home',
         pathMatch: 'full'
       },
       {
         path: 'parks',
-        component: ParksComponent
+        component: ParksComponent,
+        children: [
+          {
+            path: 'park1',
+            component: ParkOneComponent,
+            outlet: 'parkit'
+          },
+          {
+            path: 'park2',
+            component: ParkTwoComponent,
+            outlet: 'parkit'
+          },
+          {
+            path: 'park3',
+            component: ParkThreeComponent,
+            outlet: 'parkit'
+          }
+        ]
       }
     ])
   ],
