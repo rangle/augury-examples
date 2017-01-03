@@ -10,6 +10,7 @@ import { ParksComponent } from './parks/parks.component';
 import { ParkOneComponent } from './park-one/park-one.component';
 import { ParkTwoComponent } from './park-two/park-two.component';
 import { ParkThreeComponent } from './park-three/park-three.component';
+import { CityModule} from './city-module/city.module';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { ParkThreeComponent } from './park-three/park-three.component';
           }
         ]
       }
-    ])
+    ]),
+    CityModule
   ],
   providers: [],
   bootstrap: [AppComponent]
