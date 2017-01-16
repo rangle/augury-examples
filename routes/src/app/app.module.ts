@@ -54,6 +54,10 @@ import { ParkThreeComponent } from './park-three/park-three.component';
             outlet: 'parkit'
           }
         ]
+      },
+      {
+        path: 'cities',
+        loadChildren: './city-module/city.module#CityModule'
       }
     ])
   ],
