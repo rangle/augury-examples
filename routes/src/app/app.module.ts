@@ -10,7 +10,6 @@ import { ParksComponent } from './parks/parks.component';
 import { ParkOneComponent } from './park-one/park-one.component';
 import { ParkTwoComponent } from './park-two/park-two.component';
 import { ParkThreeComponent } from './park-three/park-three.component';
-import { CityModule} from './city-module/city.module';
 
 @NgModule({
   declarations: [
@@ -55,9 +54,12 @@ import { CityModule} from './city-module/city.module';
             outlet: 'parkit'
           }
         ]
+      },
+      {
+        path: 'cities',
+        loadChildren: './city-module/city.module#CityModule'
       }
-    ]),
-    CityModule
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]

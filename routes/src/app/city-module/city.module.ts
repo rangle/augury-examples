@@ -10,23 +10,20 @@ import { CityThreeComponent } from './city-three.component';
   imports: [
     RouterModule.forChild([
       {
-        path: 'cities',
+        path: '',
         component: CityComponent,
         children: [
           {
             path: 'city1',
-            component: CityOneComponent,
-            outlet: 'city'
+            component: CityOneComponent
           },
           {
             path: 'city2',
-            component: CityTwoComponent,
-            outlet: 'city'
+            component: CityTwoComponent
           },
           {
             path: 'city3',
-            component: CityThreeComponent,
-            outlet: 'city'
+            component: CityThreeComponent
           }
         ],
       },

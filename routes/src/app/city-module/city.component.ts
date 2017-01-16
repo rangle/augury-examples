@@ -4,10 +4,10 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-city',
   template: `
     <h1>Cities</h1>
-    <a [routerLink]="{outlets: {city: ['city1']}}">City 1</a>
-    <a [routerLink]="{outlets: {city: ['city2']}}">City 2</a>
-    <a [routerLink]="{outlets: {city: ['city3']}}">City 3</a>
-    <router-outlet name="city"><router-outlet>
+    <a routerLink="city1">City 1</a>
+    <a routerLink="city2">City 2</a>
+    <a routerLink="city3">City 3</a>
+    <router-outlet><router-outlet>
   `,
   styles: []
 })
