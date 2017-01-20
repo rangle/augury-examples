@@ -9,6 +9,6 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'Angular Routes';
 
-  constructor(private router: Router) {
+  constructor() {
   }
 }

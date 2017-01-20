@@ -3,9 +3,8 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-home',
   template: `
-    <p>
-      home Works!
-    </p>
+    <h2>Home</h2>
+    <p>This demo application shows the use of routes and lazy loaded child routes.</p>
   `,
   styles: []
 })
