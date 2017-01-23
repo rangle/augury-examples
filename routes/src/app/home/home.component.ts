@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-home',
   template: `
     <h2>Home</h2>
-    <p>This demo application shows the use of routes and lazy loaded child routes.</p>
+    <p>This demo application makes use of routes and lazy loaded child routes.</p>
   `,
   styles: []
 })
