@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Angular Input Output';
+  title = 'Augury Input Output Demo';
   count: number;
 
   @Input() message = "Jumbo Shrimp!";
