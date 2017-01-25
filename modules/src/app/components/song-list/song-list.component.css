@@ -1,0 +1,17 @@
+.songItem img {
+    vertical-align: middle;
+    float: left;
+    width: 65px;
+    height: 65px;
+    margin-right: 10px;
+}
+
+.songItem {
+    height: 70px;
+    padding: 10px 0 10px 0;
+}
+
+.songItem:hover {
+    color: #5128a5;
+    cursor: pointer;
+}
