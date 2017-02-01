@@ -13,6 +13,7 @@ export class LoginFormComponent implements OnInit {
   }
 
   onSubmit(value) {
+    console.log(JSON.stringify(value));
   }
 
 }

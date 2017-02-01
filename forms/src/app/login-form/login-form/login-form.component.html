@@ -1,6 +1,6 @@
 <div class="container ph4 pb4 black-80 br3 center w-70">
   <p class="f3">Login</p>
-  <form #formRef="ngForm" (ngSumbit)="onSubmit(ngForm.value)" class="measure center">
+  <form #formRef="ngForm" (ngSubmit)="onSubmit(formRef.value)" class="measure center">
     <div class="mt3">
       <label for="userid" class="db fw6 lh-copy f5">Username</label>
       <input type="text"
