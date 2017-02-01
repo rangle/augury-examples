@@ -4,12 +4,15 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { LoginFormComponent } from './login-form/login-form/login-form.component';
+import { LoginFormComponent } from './login-form/login-form.component';
+import { ModelFormComponent } from './model-form/model-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginFormComponent
+    LoginFormComponent,
+    ModelFormComponent,
+    ModelFormComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,6 @@
 <div class="container ph4 pb4 black-80 br3 center w-70">
   <p class="f3">Login</p>
-  <form #formRef="ngForm" (ngSubmit)="onSubmit(formRef.value)" class="measure center">
+  <form #formRef="ngForm" (ngSubmit)="onSubmit(formRef.value); formRef.reset()" class="measure center">
     <div class="mt3">
       <label for="userid" class="db fw6 lh-copy f5">Username</label>
       <input type="text"
@@ -29,6 +29,6 @@
       </label>
     </div>
 
-    <button class="link br2 ba bw1 bg-black yellow b--black fl mt3" type="submit">Login</button>
+    <button class="link br2 ba bw1 bg-black yellow b--black fl mt3" type="submit" [disabled]="!formRef.valid">Login</button>
   </form>
 </div>
