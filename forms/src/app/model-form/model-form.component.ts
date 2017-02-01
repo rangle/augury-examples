@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'model-form',
@@ -12,9 +12,9 @@ export class ModelFormComponent implements OnInit {
 
   constructor(formBuilder: FormBuilder) {
     this.fg = formBuilder.group({
-      'name': 'Tammy',
-      'surname': 'Trinh',
-      'email': 'tam@york.tv',
+      'name': ['Tammy', Validators.required],
+      'surname': ['Trinh', Validators.required],
+      'email': ['tam@york.tv', Validators.required],
       'gender': 'female'
     });
   }

@@ -10,3 +10,6 @@ button[disabled] {
   color: gray;
 }
 
+.notify {
+  color: red;
+}

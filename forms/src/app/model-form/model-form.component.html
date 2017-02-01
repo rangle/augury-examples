@@ -3,23 +3,26 @@
   <form [formGroup]="fg" (ngSubmit)="onSubmit(fg.value)">
     <div>
       <label for="name" class="db fw6 lh-copy f5">Name</label>
-      <input type="text" required
+      <input type="text"
              formControlName="name"
              class="pa1 input-reset ba hover-bg-washed-blue hover-dark-blue w-100">
+      <p *ngIf="fg.controls.name.errors" class="notify">Name is required.</p>
     </div>
 
     <div class="mt3">
       <label for="surname" class="db fw6 lh-copy f5">Surname</label>
-      <input type="text" required
+      <input type="text"
              formControlName="surname"
              class="pa1 input-reset ba hover-bg-washed-blue hover-dark-blue w-100">
+      <p *ngIf="fg.controls.surname.errors" class="notify">Surname is required.</p>
     </div>
 
     <div class="mt3">
       <label for="email" class="db fw6 lh-copy f5">Email</label>
-      <input type="text" required
+      <input type="text"
              formControlName="email"
              class="pa1 input-reset ba hover-bg-washed-blue hover-dark-blue w-100">
+      <p *ngIf="fg.controls.email.errors" class="notify">Email is required</p>
     </div>
 
     <div class="mt3">
