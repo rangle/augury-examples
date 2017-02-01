@@ -1,12 +1,12 @@
 <div class="container ph4 pb4 mt5 black-80 br3 center w-70">
   <p class="f3">New Client (Model driven)</p>
-  <form [formGroup]="fg" (ngSubmit)="onSubmit(fg.value)">
+  <form [formGroup]="fg" (ngSubmit)="onSubmit(fg.value); fg.reset()">
     <div>
       <label for="name" class="db fw6 lh-copy f5">Name</label>
       <input type="text"
              formControlName="name"
              class="pa1 input-reset ba hover-bg-washed-blue hover-dark-blue w-100">
-      <p *ngIf="fg.controls.name.errors" class="notify">Name is required.</p>
+      <p *ngIf="fg.controls.name.errors && !fg.controls.name.untouched" class="notify">Name is required.</p>
     </div>
 
     <div class="mt3">
@@ -14,7 +14,7 @@
       <input type="text"
              formControlName="surname"
              class="pa1 input-reset ba hover-bg-washed-blue hover-dark-blue w-100">
-      <p *ngIf="fg.controls.surname.errors" class="notify">Surname is required.</p>
+      <p *ngIf="fg.controls.surname.errors && !fg.controls.surname.untouched" class="notify">Surname is required.</p>
     </div>
 
     <div class="mt3">
@@ -22,7 +22,7 @@
       <input type="text"
              formControlName="email"
              class="pa1 input-reset ba hover-bg-washed-blue hover-dark-blue w-100">
-      <p *ngIf="fg.controls.email.errors" class="notify">Email is required</p>
+      <p *ngIf="fg.controls.email.errors && !fg.controls.email.untouched" class="notify">Email is required</p>
     </div>
 
     <div class="mt3">

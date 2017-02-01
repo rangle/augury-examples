@@ -15,7 +15,7 @@ export class ModelFormComponent implements OnInit {
       'name': ['Tammy', Validators.required],
       'surname': ['Trinh', Validators.required],
       'email': ['tam@york.tv', Validators.required],
-      'gender': 'female'
+      'gender': ['female', Validators.required]
     });
   }
 
