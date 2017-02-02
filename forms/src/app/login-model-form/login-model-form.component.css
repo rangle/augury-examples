@@ -1,0 +1,11 @@
+:host {
+  display: flex;
+}
+
+.container {
+  background-color: #E2CEFF;
+}
+
+button[disabled] {
+  color: gray;
+}

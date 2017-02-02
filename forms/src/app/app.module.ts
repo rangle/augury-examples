@@ -6,12 +6,14 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { ModelFormComponent } from './model-form/model-form.component';
+import { LoginModelFormComponent } from './login-model-form/login-model-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginFormComponent,
-    ModelFormComponent
+    ModelFormComponent,
+    LoginModelFormComponent
   ],
   imports: [
     BrowserModule,

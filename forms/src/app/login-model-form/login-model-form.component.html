@@ -6,7 +6,7 @@
       <input type="text"
              name="userid"
              id="userid"
-             ngModel
+             [(ngModel)]="username"
              required
              class="pa1 input-reset ba hover-bg-washed-blue hover-dark-blue w-100">
     </div>
@@ -16,7 +16,7 @@
       <input type="password"
              name="password"
              id="password"
-             ngModel
+             [(ngModel)]="password"
              required
              minlength="5"
              class="pa1 input-reset ba hover-bg-washed-blue hover-dark-blue w-100">
@@ -24,7 +24,7 @@
 
     <div class="mt3">
       <label for="remember" >
-        <input type="checkbox" name="remember" id="remember" ngModel class="fw6 lh-copy f5">
+        <input type="checkbox" name="remember" id="remember" [(ngModel)]="remember" class="fw6 lh-copy f5">
         Remember
       </label>
     </div>
