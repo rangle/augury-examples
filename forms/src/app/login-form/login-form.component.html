@@ -1,0 +1,34 @@
+<div class="container ph4 pb4 black-80 br3 ma3 center w-70">
+  <p class="f3">Login (Template based)</p>
+  <form #formRef="ngForm" (ngSubmit)="onSubmit(formRef.value); formRef.reset()" class="measure center">
+    <div class="mt3">
+      <label for="userid" class="db fw6 lh-copy f5">Username</label>
+      <input type="text"
+             name="userid"
+             id="userid"
+             ngModel
+             required
+             class="pa1 input-reset ba hover-bg-washed-blue hover-dark-blue w-100">
+    </div>
+
+    <div class="mt3">
+      <label for="password" class="db fw6 lh-copy f5">Password</label>
+      <input type="password"
+             name="password"
+             id="password"
+             ngModel
+             required
+             minlength="5"
+             class="pa1 input-reset ba hover-bg-washed-blue hover-dark-blue w-100">
+    </div>
+
+    <div class="mt3">
+      <label for="remember" >
+        <input type="checkbox" name="remember" id="remember" ngModel class="fw6 lh-copy f5">
+        Remember
+      </label>
+    </div>
+
+    <button class="link br2 ba bw1 bg-black yellow b--black fl mt3" type="submit" [disabled]="!formRef.valid">Login</button>
+  </form>
+</div>

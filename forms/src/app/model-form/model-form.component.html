@@ -1,0 +1,44 @@
+<div class="container ph4 pb4 black-80 br3 ma3 center w-70">
+  <p class="f3">New Client (Model driven)</p>
+  <form [formGroup]="fg" (ngSubmit)="onSubmit(fg.value); fg.reset()">
+    <div>
+      <label for="name" class="db fw6 lh-copy f5">Name</label>
+      <input type="text"
+             formControlName="name"
+             class="pa1 input-reset ba hover-bg-washed-blue hover-dark-blue w-100">
+      <p *ngIf="fg.controls.name.errors && !fg.controls.name.untouched" class="notify">Name is required.</p>
+    </div>
+
+    <div class="mt3">
+      <label for="surname" class="db fw6 lh-copy f5">Surname</label>
+      <input type="text"
+             formControlName="surname"
+             class="pa1 input-reset ba hover-bg-washed-blue hover-dark-blue w-100">
+      <p *ngIf="fg.controls.surname.errors && !fg.controls.surname.untouched" class="notify">Surname is required.</p>
+    </div>
+
+    <div class="mt3">
+      <label for="email" class="db fw6 lh-copy f5">Email</label>
+      <input type="text"
+             formControlName="email"
+             class="pa1 input-reset ba hover-bg-washed-blue hover-dark-blue w-100">
+      <p *ngIf="fg.controls.email.errors && !fg.controls.email.untouched" class="notify">Email is required</p>
+    </div>
+
+    <div class="mt3">
+      <label class="db">
+        <input type="radio"
+               value="male"
+               formControlName="gender"> Male
+      </label>
+      <label class="db">
+        <input type="radio"
+               value="female"
+               formControlName="gender"> Female
+      </label>
+    </div>
+
+    <button type="submit" class="link br2 ba bw1 bg-black yellow b--black fl mt3" [disabled]="!fg.valid">Save</button>
+
+  </form>
+</div>
