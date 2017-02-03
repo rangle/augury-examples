@@ -16,8 +16,8 @@ export class LoginModelFormComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSubmit(value) {
-    console.log(value);
+  onSubmit() {
+    console.log({userid: this.username, password: this.password, remember: this.remember});
   }
 
 }
