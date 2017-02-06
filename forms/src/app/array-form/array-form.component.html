@@ -6,22 +6,22 @@
              [formControl]="item"
              placeholder="{{placeholders[i]}}"
              [ngClass]="{
-              'is-error': item.hasError('minLength') && item.touched
+              'is-error': item.hasError('minLength') && item.dirty
              }"
              class="pa1 mb1 input-reset ba hover-bg-washed-blue hover-dark-blue w-100">
-        <div class="error mt3" *ngIf="item.hasError('minLength')">Location must be greater than 2 characters!</div>
+        <div class="error mt3" *ngIf="item.hasError('minLength')">Location must be greater than 5 characters!</div>
     </div>
 
-    <button (click)="addLocation(form)" >Add a Location</button> <button (click)="addEmail()">Add Email</button>
+    <button (click)="addLocation()" >Add a Location</button> <button (click)="addEmail()">Add Email</button>
 
     <div class="mb5">
-    <div class="mt2">
-      <button (click)="save()" class="link mr2 br2 ba bw1 bg-black yellow b--black fl" [disabled]="!form.valid">Save</button>
-      <div *ngIf="!form.valid" class="error mt2">Cannot save, location has to be greater than 5 characters</div>
-    </div>
+      <div class="mt2">
+        <button (click)="save()" class="link mr2 br2 ba bw1 bg-black yellow b--black fl" [disabled]="!form.valid">Save</button>
+        <div *ngIf="!form.valid" class="error mt2">Cannot save, location has to be greater than 5 characters</div>
+      </div>
     </div>
 
     <div class="mt2 output">
-      <pre>{{output}}</pre>
+      <pre>{{form.value}}</pre>
     </div>
 </div>

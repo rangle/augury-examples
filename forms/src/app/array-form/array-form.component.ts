@@ -8,7 +8,6 @@ import { FormArray, FormControl, Validators } from '@angular/forms';
 })
 export class ArrayFormComponent {
   form;
-  currentUser: Array<String> = [];
   placeholders = [
     'Name',
     'Job'
@@ -23,6 +22,7 @@ export class ArrayFormComponent {
   }
 
   addEmail() {
+    // if email field has already been added, don't add it again
     if (this.placeholders.indexOf('Email') === -1) {
       this.form.push(new FormControl(''));
       this.placeholders.push('Email');
@@ -30,6 +30,7 @@ export class ArrayFormComponent {
   }
 
   addLocation() {
+    // if location field has already been added, don't add it again
     if (this.placeholders.indexOf('Location') === -1) {
       this.form.push(new FormControl('', Validators.minLength(5)));
       this.placeholders.push('Location');
