@@ -1,6 +1,8 @@
 {
   "name": "kitchen-sink-example",
   "scripts": {
+    "start": "webpack-dev-server --inline --progress",
+    "start:dev": "webpack-dashboard -- webpack-dev-server --config webpack.config.js --watch",
     "build": "webpack --config webpack.prod.config.js"
   },
   "devDependencies": {
