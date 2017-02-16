@@ -26,6 +26,11 @@ module.exports = {
     extensions: ["webpack.js", ".web.js", ".ts", ".js"]
   },
   plugins: [
+    // Fixes Angular 2 error
+    new webpack.ContextReplacementPlugin(
+      /angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,
+      __dirname
+    ),
     new webpack.optimize.CommonsChunkPlugin({
       name: "common",
       filename: "common.js"
@@ -42,6 +47,7 @@ module.exports = {
       {
         enforce: 'pre',
         test: /\.ts$/,
+        exclude: /node_modules/,
         use: "tslint-loader"
       },
       {
@@ -54,7 +60,7 @@ module.exports = {
         test: /\.tsx?$/,
         use: "source-map-loader"
       },
-      { test: /\.ts$/, use: ['@angularclass/hmr-loader', 'ts-loader', 'angular2-template-loader', 'angular2-router-loader'] },
+      { test: /\.ts$/, exclude: /node_modules/, use: ['@angularclass/hmr-loader', 'ts-loader', 'angular2-template-loader', 'angular2-router-loader'] },
       { test: /\.html$/, use: "raw-loader" },
       { test: /\.css$/, use: "style-loader!css-loader?sourceMap" },
       { test: /\.svg/, use: "url-loader" },
