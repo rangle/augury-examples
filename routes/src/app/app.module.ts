@@ -59,7 +59,7 @@ import { ParkThreeComponent } from './park-three/park-three.component';
         path: 'cities',
         loadChildren: './city-module/city.module#CityModule'
       }
-    ])
+    ], {useHash: true})
   ],
   providers: [],
   bootstrap: [AppComponent]
