@@ -29,13 +29,14 @@ var NewUserService = (function () {
     NewUserService.prototype.getStream = function () {
         return this.subject;
     };
-    NewUserService = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Injectable */])(), 
-        __metadata('design:paramtypes', [])
-    ], NewUserService);
     return NewUserService;
 }());
-//# sourceMappingURL=/Users/yadav/dev/rangle/augury-examples/dependency-injection/src/new-user.service.js.map
+NewUserService = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Injectable */])(),
+    __metadata("design:paramtypes", [])
+], NewUserService);
+
+//# sourceMappingURL=/home/yadav/dev/rangle.io/augury-examples/dependency-injection/src/new-user.service.js.map
 
 /***/ }),
 
@@ -51,25 +52,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 
 var AppComponent = (function () {
     function AppComponent() {
         this.title = 'Augury Dependency Injection Demo';
     }
-    AppComponent = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["U" /* Component */])({
-            selector: 'app-root',
-            template: "\n  <div class=\"pa2\">\n    <div class=\"ba br4 p2 pl3 mb3 bg-purple white\">\n      <h1>{{title}}</h1>\n    </div>\n    <div class=\"center\">\n      <app-form-new-user></app-form-new-user>\n    </div>\n    <div class=\"pt3\">\n      <app-user-info></app-user-info>\n    </div>\n  </div>\n  ",
-            styles: [__webpack_require__(611)]
-        }), 
-        __metadata('design:paramtypes', [])
-    ], AppComponent);
     return AppComponent;
 }());
-//# sourceMappingURL=/Users/yadav/dev/rangle/augury-examples/dependency-injection/src/app.component.js.map
+AppComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["U" /* Component */])({
+        selector: 'app-root',
+        template: "\n  <div class=\"pa2\">\n    <div class=\"ba br4 p2 pl3 mb3 bg-purple white\">\n      <h1>{{title}}</h1>\n    </div>\n    <div class=\"center\">\n      <app-form-new-user></app-form-new-user>\n    </div>\n    <div class=\"pt3\">\n      <app-user-info></app-user-info>\n    </div>\n  </div>\n  ",
+        styles: [__webpack_require__(611)]
+    })
+], AppComponent);
+
+//# sourceMappingURL=/home/yadav/dev/rangle.io/augury-examples/dependency-injection/src/app.component.js.map
 
 /***/ }),
 
@@ -106,7 +104,7 @@ if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment *
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_core__["a" /* enableProdMode */])();
 }
 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_4__app___["a" /* AppModule */]);
-//# sourceMappingURL=/Users/yadav/dev/rangle/augury-examples/dependency-injection/src/main.js.map
+//# sourceMappingURL=/home/yadav/dev/rangle.io/augury-examples/dependency-injection/src/main.js.map
 
 /***/ }),
 
@@ -129,9 +127,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 
 
 
@@ -143,26 +138,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var AppModule = (function () {
     function AppModule() {
     }
-    AppModule = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["b" /* NgModule */])({
-            declarations: [
-                __WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */],
-                __WEBPACK_IMPORTED_MODULE_5__form_new_user_form_new_user_component__["a" /* FormNewUserComponent */],
-                __WEBPACK_IMPORTED_MODULE_7__user_info_user_info_component__["a" /* UserInfoComponent */]
-            ],
-            imports: [
-                __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-                __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
-                __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* HttpModule */]
-            ],
-            providers: [__WEBPACK_IMPORTED_MODULE_6__new_user_service__["a" /* NewUserService */]],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */]]
-        }), 
-        __metadata('design:paramtypes', [])
-    ], AppModule);
     return AppModule;
 }());
-//# sourceMappingURL=/Users/yadav/dev/rangle/augury-examples/dependency-injection/src/app.module.js.map
+AppModule = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["b" /* NgModule */])({
+        declarations: [
+            __WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */],
+            __WEBPACK_IMPORTED_MODULE_5__form_new_user_form_new_user_component__["a" /* FormNewUserComponent */],
+            __WEBPACK_IMPORTED_MODULE_7__user_info_user_info_component__["a" /* UserInfoComponent */]
+        ],
+        imports: [
+            __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
+            __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* HttpModule */]
+        ],
+        providers: [__WEBPACK_IMPORTED_MODULE_6__new_user_service__["a" /* NewUserService */]],
+        bootstrap: [__WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */]]
+    })
+], AppModule);
+
+//# sourceMappingURL=/home/yadav/dev/rangle.io/augury-examples/dependency-injection/src/app.module.js.map
 
 /***/ }),
 
@@ -191,18 +186,19 @@ var FormNewUserComponent = (function () {
     FormNewUserComponent.prototype.onSubmit = function (data) {
         this.newUserService.registerNewUser(data);
     };
-    FormNewUserComponent = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["U" /* Component */])({
-            selector: 'app-form-new-user',
-            template: "\n    <form #formRef=\"ngForm\">\n      <div class=\"dt dt--fixed w-100 ba pt2\">\n\n        <div class=\"dt dt--fixed\">\n          <label for=\"name\" class=\"fl w-20 tr pr2 mb2 \">Name:</label>\n          <input type=\"text\" id=\"name\" name=\"name\" ngModel required class=\"fl w-25 mb2\" />\n          <label for=\"surname\" class=\"fl w-20 tr pr2 mb2\">Surname:</label>\n          <input type=\"text\" id=\"surname\" name=\"surname\" ngModel required class=\"fl w-25 mb2\" />\n        </div>\n\n        <div class=\"dt dt--fixed\">\n          <label for=\"email\" class=\"fl w-20 tr pr2 mb2\">Email:</label>\n          <input type=\"text\" id=\"email\" name=\"email\" ngModel required class=\"fl w-25 mb2\" />\n        </div>\n\n        <div class=\"dt dt--fixed\">\n          <label for=\"password\" class=\"fl w-20 tr pr2 mb2\">Password:</label>\n          <input type=\"password\" id=\"password\" name=\"password\" ngModel required class=\"fl w-25 mb2\"/>\n          <label for=\"surname\" class=\"fl w-20 tr pr2 mb2\">&nbsp;</label>\n          <button (click)=\"onSubmit(formRef.value); formRef.reset();\" [disabled]=\"!formRef.valid\" class=\"link br2 ba bw1 bg-black yellow b--black fl w-25\">Create</button>\n        </div>\n\n      </div>\n\n    </form>\n  ",
-            styles: []
-        }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__new_user_service__["a" /* NewUserService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__new_user_service__["a" /* NewUserService */]) === 'function' && _a) || Object])
-    ], FormNewUserComponent);
     return FormNewUserComponent;
-    var _a;
 }());
-//# sourceMappingURL=/Users/yadav/dev/rangle/augury-examples/dependency-injection/src/form-new-user.component.js.map
+FormNewUserComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["U" /* Component */])({
+        selector: 'app-form-new-user',
+        template: "\n    <form #formRef=\"ngForm\">\n      <div class=\"dt dt--fixed w-100 ba pt2\">\n\n        <div class=\"dt dt--fixed\">\n          <label for=\"name\" class=\"fl w-20 tr pr2 mb2 \">Name:</label>\n          <input type=\"text\" id=\"name\" name=\"name\" ngModel required class=\"fl w-25 mb2\" />\n          <label for=\"surname\" class=\"fl w-20 tr pr2 mb2\">Surname:</label>\n          <input type=\"text\" id=\"surname\" name=\"surname\" ngModel required class=\"fl w-25 mb2\" />\n        </div>\n\n        <div class=\"dt dt--fixed\">\n          <label for=\"email\" class=\"fl w-20 tr pr2 mb2\">Email:</label>\n          <input type=\"text\" id=\"email\" name=\"email\" ngModel required class=\"fl w-25 mb2\" />\n        </div>\n\n        <div class=\"dt dt--fixed\">\n          <label for=\"password\" class=\"fl w-20 tr pr2 mb2\">Password:</label>\n          <input type=\"password\" id=\"password\" name=\"password\" ngModel required class=\"fl w-25 mb2\"/>\n          <label for=\"surname\" class=\"fl w-20 tr pr2 mb2\">&nbsp;</label>\n          <button (click)=\"onSubmit(formRef.value); formRef.reset();\" [disabled]=\"!formRef.valid\" class=\"link br2 ba bw1 bg-black yellow b--black fl w-25\">Create</button>\n        </div>\n\n      </div>\n\n    </form>\n  ",
+        styles: []
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__new_user_service__["a" /* NewUserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__new_user_service__["a" /* NewUserService */]) === "function" && _a || Object])
+], FormNewUserComponent);
+
+var _a;
+//# sourceMappingURL=/home/yadav/dev/rangle.io/augury-examples/dependency-injection/src/form-new-user.component.js.map
 
 /***/ }),
 
@@ -216,7 +212,7 @@ var FormNewUserComponent = (function () {
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_1__app_module__["a"]; });
 
 
-//# sourceMappingURL=/Users/yadav/dev/rangle/augury-examples/dependency-injection/src/index.js.map
+//# sourceMappingURL=/home/yadav/dev/rangle.io/augury-examples/dependency-injection/src/index.js.map
 
 /***/ }),
 
@@ -244,18 +240,19 @@ var UserInfoComponent = (function () {
         this.newUserService = newUserService;
         this.newUserService.getStream().subscribe(function (data) { return _this.userInfo = data; });
     }
-    UserInfoComponent = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["U" /* Component */])({
-            selector: 'app-user-info',
-            template: "\n    <div *ngIf=\"userInfo\">\n      <div class=\"overflow-auto\">\n        <table class=\"f6 w-100 mw8 ba\" cellspacing=\"0\">\n          <thead>\n            <tr class=\"stripe-dark\">\n              <th class=\"fw6 tl pa2 ba bg-white\">Name</th>\n              <th class=\"fw6 tl pa2 ba bg-white\">Surname</th>\n              <th class=\"fw6 tl pa2 ba bg-white\">Email</th>\n              <th class=\"fw6 tl pa2 ba bg-white\">Password</th>\n            </tr>\n          </thead>\n          <tbody class=\"lh-copy\">\n            <tr class=\"stripe-dark\">\n              <td class=\"pa2 ba\">{{userInfo.name}}</td>\n              <td class=\"pa2 ba\">{{userInfo.surname}}</td>\n              <td class=\"pa2 ba\">{{userInfo.email}}</td>\n              <td class=\"pa2 ba\">{{userInfo.password}}</td>\n            </tr>\n          </tbody>\n        </table>\n      </div>\n    </div>\n  ",
-            styles: []
-        }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__new_user_service__["a" /* NewUserService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__new_user_service__["a" /* NewUserService */]) === 'function' && _a) || Object])
-    ], UserInfoComponent);
     return UserInfoComponent;
-    var _a;
 }());
-//# sourceMappingURL=/Users/yadav/dev/rangle/augury-examples/dependency-injection/src/user-info.component.js.map
+UserInfoComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["U" /* Component */])({
+        selector: 'app-user-info',
+        template: "\n    <div *ngIf=\"userInfo\">\n      <div class=\"overflow-auto\">\n        <table class=\"f6 w-100 mw8 ba\" cellspacing=\"0\">\n          <thead>\n            <tr class=\"stripe-dark\">\n              <th class=\"fw6 tl pa2 ba bg-white\">Name</th>\n              <th class=\"fw6 tl pa2 ba bg-white\">Surname</th>\n              <th class=\"fw6 tl pa2 ba bg-white\">Email</th>\n              <th class=\"fw6 tl pa2 ba bg-white\">Password</th>\n            </tr>\n          </thead>\n          <tbody class=\"lh-copy\">\n            <tr class=\"stripe-dark\">\n              <td class=\"pa2 ba\">{{userInfo.name}}</td>\n              <td class=\"pa2 ba\">{{userInfo.surname}}</td>\n              <td class=\"pa2 ba\">{{userInfo.email}}</td>\n              <td class=\"pa2 ba\">{{userInfo.password}}</td>\n            </tr>\n          </tbody>\n        </table>\n      </div>\n    </div>\n  ",
+        styles: []
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__new_user_service__["a" /* NewUserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__new_user_service__["a" /* NewUserService */]) === "function" && _a || Object])
+], UserInfoComponent);
+
+var _a;
+//# sourceMappingURL=/home/yadav/dev/rangle.io/augury-examples/dependency-injection/src/user-info.component.js.map
 
 /***/ }),
 
@@ -268,10 +265,11 @@ var UserInfoComponent = (function () {
 // The build system defaults to the dev environment which uses `environment.ts`, but if you do
 // `ng build --env=prod` then `environment.prod.ts` will be used instead.
 // The list of which env maps to which file can be found in `angular-cli.json`.
+// The file contents for the current environment will overwrite these during build.
 var environment = {
     production: false
 };
-//# sourceMappingURL=/Users/yadav/dev/rangle/augury-examples/dependency-injection/src/environment.js.map
+//# sourceMappingURL=/home/yadav/dev/rangle.io/augury-examples/dependency-injection/src/environment.js.map
 
 /***/ }),
 
@@ -311,6 +309,8 @@ var environment = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_core_js_es7_reflect___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14_core_js_es7_reflect__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_zone_js_dist_zone__ = __webpack_require__(624);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_zone_js_dist_zone___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_15_zone_js_dist_zone__);
+// This file includes polyfills needed by Angular 2 and is loaded before
+// the app. You can add your own extra polyfills to this file.
 
 
 
@@ -327,7 +327,7 @@ var environment = {
 
 
 
-//# sourceMappingURL=/Users/yadav/dev/rangle/augury-examples/dependency-injection/src/polyfills.js.map
+//# sourceMappingURL=/home/yadav/dev/rangle.io/augury-examples/dependency-injection/src/polyfills.js.map
 
 /***/ }),
 
