@@ -1,10 +1,10 @@
-import { RoutesPage } from './app.po';
+import { FormNewUserPage } from './app.po';
 
-describe('routes App', function() {
-  let page: RoutesPage;
+describe('form-new-user App', function() {
+  let page: FormNewUserPage;
 
   beforeEach(() => {
-    page = new RoutesPage();
+    page = new FormNewUserPage();
   });
 
   it('should display message saying app works', () => {
