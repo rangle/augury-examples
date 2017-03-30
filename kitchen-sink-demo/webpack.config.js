@@ -1,76 +1,79 @@
-'use strict';
+"use strict";
 
 const path = require("path");
-const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const DashboardPlugin = require('webpack-dashboard/plugin');
+const webpack = require("webpack");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const DashboardPlugin = require("webpack-dashboard/plugin");
 
 module.exports = {
   stats: {
     colors: true,
     reasons: true
   },
-
   entry: {
-    app: './src/app.ts',
-    vendor: [
-      'core-js',
-      'reflect-metadata',
-      'zone.js/dist/zone',
-      '@angular/platform-browser-dynamic',
-      '@angular/core',
-      '@angular/common',
-      '@angular/router',
-      '@angular/http'
-     ]
+    app: "./src/app.ts",
+    vendor: "./vendor.ts"
   },
-
   output: {
-    path: path.resolve(__dirname, 'app'),
-    filename: '[name].[hash].bundle.js',
+    path: path.resolve(__dirname, "app"),
+    filename: "[name].[hash].bundle.js",
     publicPath: "/",
-    sourceMapFilename: '[name].[hash].bundle.js.map',
-    chunkFilename: '[id].chunk.js'
+    sourceMapFilename: "[name].[hash].bundle.js.map",
+    chunkFilename: "[id].chunk.js"
   },
-
-  devtool: 'source-map',
-
+  devtool: "source-map",
   resolve: {
-    extensions: ['', '.webpack.js', '.web.js', '.ts', '.js']
+    extensions: ["webpack.js", ".web.js", ".ts", ".js"]
   },
-
   plugins: [
-    new webpack.optimize.CommonsChunkPlugin('vendor', '[name].[hash].bundle.js'),
+    // Fixes Angular 2 error
+    new webpack.ContextReplacementPlugin(
+      /angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,
+      __dirname
+    ),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: "common",
+      filename: "common.js"
+    }),
     new HtmlWebpackPlugin({
-      template: './src/index.html',
-      inject: 'body',
+      template: "./src/index.html",
+      inject: "body",
       minify: false
     }),
     new DashboardPlugin()
   ],
-
   module: {
-    preLoaders: [{
-      test: /\.ts$/,
-      loader: 'tslint'
-    }],
-    loaders: [
-      { test: /\.ts$/, loaders: ['ts', 'angular2-router-loader'], exclude: /node_modules/ },
-      { test: /\.html$/, loader: 'raw' },
-      { test: /\.css$/, loader: 'style-loader!css-loader?sourceMap' },
-      { test: /\.svg/, loader: 'url' },
-      { test: /\.eot/, loader: 'url' },
-      { test: /\.woff/, loader: 'url' },
-      { test: /\.woff2/, loader: 'url' },
-      { test: /\.ttf/, loader: 'url' },
+    rules: [
+      {
+        enforce: 'pre',
+        test: /\.ts$/,
+        exclude: /node_modules/,
+        use: "tslint-loader"
+      },
+      {
+        enforce: 'pre',
+        test: /\.js$/,
+        use: "source-map-loader"
+      },
+      {
+        enforce: 'pre',
+        test: /\.tsx?$/,
+        use: "source-map-loader"
+      },
+      { test: /\.ts$/, exclude: /node_modules/, use: ['@angularclass/hmr-loader', 'ts-loader', 'angular2-template-loader', 'angular2-router-loader'] },
+      { test: /\.html$/, use: "raw-loader" },
+      { test: /\.css$/, use: "style-loader!css-loader?sourceMap" },
+      { test: /\.svg/, use: "url-loader" },
+      { test: /\.eot/, use: "url-loader" },
+      { test: /\.woff/, use: "url-loader" },
+      { test: /\.woff2/, use: "url-loader" },
+      { test: /\.ttf/, use: "url-loader" }
     ],
-    noParse: [ /zone\.js\/dist\/.+/, /angular2\/bundles\/.+/ ]
+    noParse: [/zone\.js\/dist\/.+/, /angular2\/bundles\/.+/]
   },
-
   devServer: {
     inline: true,
-    colors: true,
-    contentBase: './app',
-    publicPath: '/'
+    contentBase: "./app",
+    publicPath: "/"
   }
 }
