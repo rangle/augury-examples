@@ -1,12 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 
 import { Logger } from './services/logger.service';
 
-import { SongsModule } from './modules/songs.module';
+import { ReposModule } from './modules/repos.module';
 
 @NgModule({
   declarations: [
@@ -14,8 +14,8 @@ import { SongsModule } from './modules/songs.module';
   ],
   imports: [
     BrowserModule,
-    HttpModule,
-    SongsModule
+    HttpClientModule,
+    ReposModule
   ],
   providers: [Logger],
   bootstrap: [AppComponent]

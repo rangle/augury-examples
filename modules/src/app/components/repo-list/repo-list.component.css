@@ -1,4 +1,4 @@
-.songItem img {
+.repoItem img {
     vertical-align: middle;
     float: left;
     width: 65px;
@@ -6,12 +6,12 @@
     margin-right: 10px;
 }
 
-.songItem {
+.repoItem {
     height: 70px;
     padding: 10px 0 10px 0;
 }
 
-.songItem:hover {
+.repoItem:hover {
     color: #5128a5;
     cursor: pointer;
 }
