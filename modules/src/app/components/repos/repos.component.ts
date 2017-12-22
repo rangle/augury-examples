@@ -1,4 +1,4 @@
-import {Component, ViewChildren, AfterViewInit} from '@angular/core';
+import {Component, ViewChild, AfterViewInit, ElementRef} from '@angular/core';
 import {RepoService} from '../../services/repos.service';
 import {
   FormControl,
@@ -11,14 +11,17 @@ import {
   styleUrls: ['./repos.component.css'],
   template: `
     <h2>GitHub Repos</h2>
-    <form [formGroup]="searchForm">
+    <form [formGroup]="searchForm" (ngSubmit)="search()">
       <input
         #searchInput
         class="search" 
-        formControlName="repo" 
-        debounce="400" 
-        placeholder="Search for GitHub repo"
-        (keyup)="search()" />
+        formControlName="repo"
+        placeholder="Search for GitHub repo"/>
+      <button
+        type="submit"
+        class="f6 link dim br3 ph3 pv2 mb2 dib white bg-light-purple">
+        Submit
+      </button>
     </form>
     <hr/>
     <repo-list [repos]="repos"></repo-list>
@@ -29,7 +32,7 @@ export class ReposComponent implements AfterViewInit {
   searchField: FormControl;
   searchForm: FormGroup;
 
-  @ViewChildren('searchInput') searchInput;
+  @ViewChild('searchInput') searchInput: ElementRef;
 
   constructor(private repoService: RepoService, private formBuilder: FormBuilder) {
     this.searchField = new FormControl();
@@ -37,7 +40,7 @@ export class ReposComponent implements AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.searchInput.first.nativeElement.focus();
+    this.searchInput.nativeElement.focus();
   }
 
   search() {
