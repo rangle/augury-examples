@@ -24,12 +24,12 @@ export class ModelFormComponent implements OnInit {
 
   ngOnInit() {
   }
-
+/*
   enableWelcomeMessage () {
     this.fg.addControl('message');
     this.welcomeMessage = 'congrats on remembering your password!';
   }
-
+*/
   onSubmit(value) {
     console.log(JSON.stringify(value));
   }
