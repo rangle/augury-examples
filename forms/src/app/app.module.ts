@@ -4,16 +4,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { LoginFormComponent } from './login-form/login-form.component';
 import { ModelFormComponent } from './model-form/model-form.component';
 import { LoginModelFormComponent } from './login-model-form/login-model-form.component';
+import { ArrayFormComponent } from './array-form/array-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginFormComponent,
     ModelFormComponent,
-    LoginModelFormComponent
+    LoginModelFormComponent,
+    ArrayFormComponent
   ],
   imports: [
     BrowserModule,

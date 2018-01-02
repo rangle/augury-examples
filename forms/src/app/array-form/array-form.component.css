@@ -1,0 +1,25 @@
+:host {
+  display: flex;
+}
+
+.container {
+  background-color: #E2CEFF;
+}
+
+button[disabled] {
+  color: gray;
+}
+
+.output {
+  padding: 10px;
+  border-radius: 10px;
+  background: #f4e6ff;
+}
+
+.error {
+  color: red;
+}
+
+.notify {
+  color: red;
+}
