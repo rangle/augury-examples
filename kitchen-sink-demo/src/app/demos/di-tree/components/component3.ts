@@ -1,4 +1,4 @@
-import {Component, Inject} from '@angular/core';
+import {Component, Inject, forwardRef } from '@angular/core';
 
 import {Service1} from '../services/service1';
 import {Service3} from '../services/service3';
@@ -19,7 +19,7 @@ export class Component3 {
 
   constructor(
     private s1: Service1,
-    private s3: Service3
+    @Inject(forwardRef(() => Service3)) private s3: Service3
   ) {
     this.service1Value = s1.value;
     this.service3Value = s3.value;
