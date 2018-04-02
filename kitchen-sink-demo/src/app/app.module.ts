@@ -37,7 +37,7 @@ import { TODO_APP_SERVICES, TODO_APP_COMPONENTS } from './demos/todo-app';
     FormsModule,
     ReactiveFormsModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [
     ...DI_TREE_SERVICES,

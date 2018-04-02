@@ -9,7 +9,6 @@ import { AngularDirectivesComponent } from './demos/angular-directives';
 import { ChangeDetectionComponent } from './demos/change-detection';
 import { StressTesterComponent } from './demos/stress-tester';
 import { MetadataTestComponent } from './demos/metadata-test';
-import { TodoAppComponent } from './demos/todo-app';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -23,7 +22,6 @@ const routes: Routes = [
   { path: 'change-detection', component: ChangeDetectionComponent },
   { path: 'stress-tester', component: StressTesterComponent },
   { path: 'metadata-test', component: MetadataTestComponent },
-  { path: 'todo-app', component: TodoAppComponent },
 ];
 
 @NgModule({

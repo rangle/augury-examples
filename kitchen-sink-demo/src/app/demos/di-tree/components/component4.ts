@@ -22,7 +22,7 @@ export class Component4 {
 
   constructor(
     private s1: Service1,
-    private s4: Service4
+    @Inject(Service4) private s4,
   ) {
     this.service1Value = s1.value;
     this.service4Value = s4.value;
