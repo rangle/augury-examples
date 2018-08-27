@@ -16,6 +16,7 @@ import { CHANGE_DETECTION_COMPONENTS } from './demos/change-detection';
 import { STRESS_TESTER_COMPONENTS } from './demos/stress-tester';
 import { METADATA_TEST_COMPONENTS } from './demos/metadata-test';
 import { TODO_APP_SERVICES, TODO_APP_COMPONENTS } from './demos/todo-app';
+import { LeakyFaucetComponent } from './demos/leaky-faucet/components/leaky-faucet.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { TODO_APP_SERVICES, TODO_APP_COMPONENTS } from './demos/todo-app';
     ...STRESS_TESTER_COMPONENTS,
     ...METADATA_TEST_COMPONENTS,
     ...TODO_APP_COMPONENTS,
+    LeakyFaucetComponent,
   ],
   imports: [
     FormsModule,
