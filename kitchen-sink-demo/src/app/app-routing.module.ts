@@ -9,6 +9,7 @@ import { AngularDirectivesComponent } from './demos/angular-directives';
 import { ChangeDetectionComponent } from './demos/change-detection';
 import { StressTesterComponent } from './demos/stress-tester';
 import { MetadataTestComponent } from './demos/metadata-test';
+import { LeakyFaucetComponent } from './demos/leaky-faucet';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'change-detection', component: ChangeDetectionComponent },
   { path: 'stress-tester', component: StressTesterComponent },
   { path: 'metadata-test', component: MetadataTestComponent },
+  { path: 'leaky-faucet', component: LeakyFaucetComponent },
 ];
 
 @NgModule({
