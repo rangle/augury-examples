@@ -17,6 +17,7 @@ import { STRESS_TESTER_COMPONENTS } from './demos/stress-tester';
 import { METADATA_TEST_COMPONENTS } from './demos/metadata-test';
 import { TODO_APP_SERVICES, TODO_APP_COMPONENTS } from './demos/todo-app';
 import { LeakyFaucetComponent } from './demos/leaky-faucet/components/leaky-faucet.component';
+import { RunOutsideAngularComponent } from './demos/leaky-faucet/run-outside-angular/run-outside-angular.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { LeakyFaucetComponent } from './demos/leaky-faucet/components/leaky-fauc
     ...METADATA_TEST_COMPONENTS,
     ...TODO_APP_COMPONENTS,
     LeakyFaucetComponent,
+    RunOutsideAngularComponent,
   ],
   imports: [
     FormsModule,

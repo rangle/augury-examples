@@ -10,6 +10,8 @@ import { Component } from '@angular/core';
       </button>
       <div class="drip">Faucet: {{ drip }}</div>
     </div>
+    <app-run-outside-angular></app-run-outside-angular>
+
   `
 })
 export class LeakyFaucetComponent {
