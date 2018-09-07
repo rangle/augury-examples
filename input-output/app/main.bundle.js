@@ -308,7 +308,7 @@ var ToggleComponent = (function () {
 ToggleComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["U" /* Component */])({
         selector: 'app-toggle',
-        template: "\n    <div class=\"flex items-center\">\n      <img [hidden]=\"state\" src=\"https://augury.angular.io/images/lights-on.png\" class=\"self-center p1\">\n      <img [hidden]=\"!state\" src=\"https://augury.angular.io/images/lights-off.png\" class=\"self-center p1\">\n      <button (click)=\"onToggleState()\" class=\"f6 link dim br3 ph3 pv2 dib white bg-light-purple\">{{label}}</button>\n    </div>\n  ",
+        template: "\n    <div class=\"flex items-center\">\n      <img [hidden]=\"state\" src=\"/images/lights-on.png\" class=\"self-center p1\">\n      <img [hidden]=\"!state\" src=\"/images/lights-off.png\" class=\"self-center p1\">\n      <button (click)=\"onToggleState()\" class=\"f6 link dim br3 ph3 pv2 dib white bg-light-purple\">{{label}}</button>\n    </div>\n  ",
         styles: []
     })
 ], ToggleComponent);

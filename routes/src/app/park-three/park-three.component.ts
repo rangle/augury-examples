@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-park-three',
   template: `
   <div>
-    <img src="https://augury.angular.io/images/bloordale-toronto-park.jpg" width="600" height="350" />
+    <img src="/images/bloordale-toronto-park.jpg" width="600" height="350" />
   </div>
   `,
   styles: []

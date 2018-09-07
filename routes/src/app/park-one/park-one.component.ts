@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-park-one',
   template: `
   <div>
-    <img src="https://augury.angular.io/images/peyto-lake-banff.jpg" width="600" height="350" />
+    <img src="/images/peyto-lake-banff.jpg" width="600" height="350" />
   </div>
   `,
   styles: []

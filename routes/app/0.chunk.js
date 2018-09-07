@@ -98,7 +98,7 @@ var CityOneComponent = (function () {
 CityOneComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["d" /* Component */])({
         selector: 'app-city-one',
-        template: "\n  <div>\n    <img src=\"https://augury.angular.io/images/toronto.jpg\"/>\n  </div>\n  ",
+        template: "\n  <div>\n    <img src=\"/images/toronto.jpg\"/>\n  </div>\n  ",
         styles: []
     }),
     __metadata("design:paramtypes", [])
@@ -134,7 +134,7 @@ var CityThreeComponent = (function () {
 CityThreeComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["d" /* Component */])({
         selector: 'app-city-three',
-        template: "\n  <div>\n    <img src=\"https://augury.angular.io/images/montreal.jpg\"/>\n  </div>\n  ",
+        template: "\n  <div>\n    <img src=\"/images/montreal.jpg\"/>\n  </div>\n  ",
         styles: []
     }),
     __metadata("design:paramtypes", [])
@@ -170,7 +170,7 @@ var CityTwoComponent = (function () {
 CityTwoComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["d" /* Component */])({
         selector: 'app-city-two',
-        template: "\n  <div>\n    <img src=\"https://augury.angular.io/images/nova-scotia.jpg\"/>\n  </div>\n  ",
+        template: "\n  <div>\n    <img src=\"/images/nova-scotia.jpg\"/>\n  </div>\n  ",
         styles: []
     }),
     __metadata("design:paramtypes", [])
@@ -206,7 +206,7 @@ var CityComponent = (function () {
 CityComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["d" /* Component */])({
         selector: 'app-city',
-        template: "\n    <h1>Cities</h1>\n    <img src=\"https://augury.angular.io/images/camera.svg\" width=\"20\" height=\"20\" align=\"center\"> <a routerLink=\"city1\" routerLinkActive=\"active\">City 1</a>\n    <a routerLink=\"city2\" routerLinkActive=\"active\">City 2</a>\n    <a routerLink=\"city3\" routerLinkActive=\"active\">City 3</a>\n    <router-outlet><router-outlet>\n  ",
+        template: "\n    <h1>Cities</h1>\n    <img src=\"/images/camera.svg\" width=\"20\" height=\"20\" align=\"center\"> <a routerLink=\"city1\" routerLinkActive=\"active\">City 1</a>\n    <a routerLink=\"city2\" routerLinkActive=\"active\">City 2</a>\n    <a routerLink=\"city3\" routerLinkActive=\"active\">City 3</a>\n    <router-outlet><router-outlet>\n  ",
         styles: ["\n    a.active {\n      background-color: yellow;\n    }\n  "]
     }),
     __metadata("design:paramtypes", [])

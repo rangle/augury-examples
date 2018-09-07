@@ -243,7 +243,7 @@ var ParkOneComponent = (function () {
 ParkOneComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["d" /* Component */])({
         selector: 'app-park-one',
-        template: "\n  <div>\n    <img src=\"https://augury.angular.io/images/peyto-lake-banff.jpg\" width=\"600\" height=\"350\" />\n  </div>\n  ",
+        template: "\n  <div>\n    <img src=\"/images/peyto-lake-banff.jpg\" width=\"600\" height=\"350\" />\n  </div>\n  ",
         styles: []
     }),
     __metadata("design:paramtypes", [])
@@ -279,7 +279,7 @@ var ParkThreeComponent = (function () {
 ParkThreeComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["d" /* Component */])({
         selector: 'app-park-three',
-        template: "\n  <div>\n    <img src=\"https://augury.angular.io/images/bloordale-toronto-park.jpg\" width=\"600\" height=\"350\" />\n  </div>\n  ",
+        template: "\n  <div>\n    <img src=\"/images/bloordale-toronto-park.jpg\" width=\"600\" height=\"350\" />\n  </div>\n  ",
         styles: []
     }),
     __metadata("design:paramtypes", [])
@@ -315,7 +315,7 @@ var ParkTwoComponent = (function () {
 ParkTwoComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["d" /* Component */])({
         selector: 'app-park-two',
-        template: "\n  <div>\n    <img src=\"https://augury.angular.io/images/mount-yamnuska2-szmurlo.jpg\" width=\"600\" height=\"350\" />\n  </div>\n  ",
+        template: "\n  <div>\n    <img src=\"/images/mount-yamnuska2-szmurlo.jpg\" width=\"600\" height=\"350\" />\n  </div>\n  ",
         styles: []
     }),
     __metadata("design:paramtypes", [])
@@ -351,7 +351,7 @@ var ParksComponent = (function () {
 ParksComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["d" /* Component */])({
         selector: 'app-parks',
-        template: "\n  <h1>National Parks</h1>\n  <img src=\"https://augury.angular.io/images/camera.svg\" width=\"20\" height=\"20\" align=\"center\"> <a [routerLink]=\"{outlets: { parkit: ['park1']}}\" routerLinkActive=\"active\">Park 1</a>\n  <a [routerLink]=\"{outlets: { parkit: ['park2']}}\" routerLinkActive=\"active\">Park 2</a>\n  <a [routerLink]=\"{outlets: { parkit: ['park3']}}\" routerLinkActive=\"active\">Park 3</a>\n  <router-outlet name=\"parkit\"></router-outlet>\n  ",
+        template: "\n  <h1>National Parks</h1>\n  <img src=\"/images/camera.svg\" width=\"20\" height=\"20\" align=\"center\"> <a [routerLink]=\"{outlets: { parkit: ['park1']}}\" routerLinkActive=\"active\">Park 1</a>\n  <a [routerLink]=\"{outlets: { parkit: ['park2']}}\" routerLinkActive=\"active\">Park 2</a>\n  <a [routerLink]=\"{outlets: { parkit: ['park3']}}\" routerLinkActive=\"active\">Park 3</a>\n  <router-outlet name=\"parkit\"></router-outlet>\n  ",
         styles: ["\n    a.active {\n      background-color: yellow;\n    }\n  "]
     }),
     __metadata("design:paramtypes", [])

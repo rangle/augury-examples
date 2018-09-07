@@ -20,12 +20,12 @@ Open the Chrome browser and in the address-bar, enter: `http://localhost:4200/`.
 
 ## Demo Applications
 
-The following demo applications should be used while reading the [Augury Guide](https://augury.angular.io/pages/guides/), to follow along. Each demo app isolates an Angular concept to play with.
+The following demo applications should be used while reading the [Augury Guide](/pages/guides/index.html), to follow along. Each demo app isolates an Angular concept to play with.
 
-* dependecy-injection
-* forms
-* input-output
-* modules
-* routes
+- dependecy-injection
+- forms
+- input-output
+- modules
+- routes
 
 There is also the Kitchen Sink demo app, which is an older app, but can still be used to quickly demo Augury features.
