@@ -9,6 +9,7 @@ import { AngularDirectivesComponent } from './demos/angular-directives';
 import { ChangeDetectionComponent } from './demos/change-detection';
 import { StressTesterComponent } from './demos/stress-tester';
 import { MetadataTestComponent } from './demos/metadata-test';
+import { TodoAppComponent } from './demos/todo-app';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'control-form', component: ControlFormComponent },
   { path: 'form2', component: Form2Component },
   { path: 'di-tree', component: DITreeComponent },
+  { path: 'todo-app', component: TodoAppComponent },
   { path: 'angular-directives', component: AngularDirectivesComponent },
   { path: 'change-detection', component: ChangeDetectionComponent },
   { path: 'stress-tester', component: StressTesterComponent },
