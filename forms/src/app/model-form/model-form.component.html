@@ -1,6 +1,6 @@
-<div class="container ph4 pb4 black-80 br3 ma3 center w-70">
+<div class="container ph4 pb4 black-80 br3 ma3 center w-50">
   <p class="f3">New Client (Model driven)</p>
-  <form [formGroup]="fg" (ngSubmit)="onSubmit(fg.value); fg.reset()">
+  <form [formGroup]="fg" (ngSubmit)="onSubmit(fg.value); fg.reset()" class="measure center">
     <div>
       <label for="name" class="db fw6 lh-copy f5">Name</label>
       <input type="text"

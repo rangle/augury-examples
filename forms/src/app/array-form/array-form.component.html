@@ -1,0 +1,39 @@
+<div class="container ph4 pb4 black-80 br3 ma3 center w-50">
+  <p class="f3">New Client (Dynamic Fields with FormArrays)</p>
+  <form [formGroup]="form" (ngSubmit)="save(); reset()" class="measure center">
+
+    <div class="m2">
+      <label for="name" class="db fw6 lh-copy f5">Name</label>
+      <input type="text"
+              formControlName="name"
+              class="pa1 mb1 input-reset ba hover-bg-washed-blue hover-dark-blue w-100">
+      <p *ngIf="form.controls.name.errors && !form.controls.name.untouched" class="notify">Name is required.</p>
+
+      <label for="address" class="db fw6 lh-copy f5">Address</label>
+      <input type="text"
+              formControlName="address"
+              class="pa1 mb1 input-reset ba hover-bg-washed-blue hover-dark-blue w-100">
+      <p *ngIf="form.controls.address.errors && !form.controls.address.untouched" class="notify">Address is required.</p>
+    </div>
+    <div formArrayName="emails">
+      <label class="db fw6 lh-copy f5" *ngIf="emailsControls.controls.length !== 0">Email</label>
+      <div class="m2" *ngFor="let item of emailsControls.controls; let i=index">
+        <input type="text"
+          [placeholder]="'Email ' + (i + 1)"
+          [formControlName]="i"
+          [ngClass]="{
+            'error': item.hasError() && item.dirty
+          }"
+          class="pa1 mb1 input-reset ba hover-bg-washed-blue hover-dark-blue w-100">
+      </div>
+    </div>
+
+    <button type="button" class="link mr2 br2 ba bw1 bg-black yellow b--black" (click)="addEmail()">Add Email</button>
+
+    <div class="mb5 mt3">
+      <div class="mt2">
+        <button type="submit" class="link mr2 br2 ba bw1 bg-black yellow b--black fl" [disabled]="!form.valid">Save</button>
+      </div>
+    </div>
+  </form>
+</div>
