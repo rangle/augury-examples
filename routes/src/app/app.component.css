@@ -1,4 +1,14 @@
 .bg-purple {
   background: #5128a5;
 }
+.btn-bg {
+  background: #ffa000;
+  border-color: #ffa000;
+  margin-right: 5px;
+}
+.center {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
 
