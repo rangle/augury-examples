@@ -57,7 +57,7 @@ import { ParkThreeComponent } from './park-three/park-three.component';
       },
       {
         path: 'cities',
-        loadChildren: './city-module/city.module#CityModule'
+        loadChildren: () => import('./city-module/city.module').then(m => m.CityModule)
       }
     ], {useHash: true})
   ],
