@@ -4,7 +4,8 @@
 :root {
   font-family: 'Roboto', sans-serif;
 }
-
-/* body {
-  background: #f1e0ff;
-} */
+.btn-bg {
+  background: #ffa000;
+  border-color: #ffa000;
+  margin-right: 5px;
+}

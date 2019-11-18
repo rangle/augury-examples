@@ -1,21 +1,12 @@
-<div class="pa2">
-  <div class="ba br4 p2 pl3 mb3 b--purple bg-purple white">
-    <h1>{{title}}</h1>
-  </div>
-  <div class="ma2 center">
-    <div>
-      <a routerLink=""
-         routerLinkActive="active"
-         class="link br2 pa1 ba bw1 btn-bg black">Home</a>
-      <a routerLink="parks"
-         routerLinkActive="active"
-         class="link br2 pa1 ba bw1 btn-bg black ">Parks</a>
-      <a routerLink="cities"
-         routerLinkActive="active"
-         class="link br2 pa1 ba bw1 btn-bg black">Cities</a>
-    </div>
-    <div>
-      <router-outlet></router-outlet>
-    </div>
-  </div>
+<header class="bg-purple fixed w-100 ph3 pv3 pv4-ns ph4-m ph5-l">
+  <nav class="f6 fw6 ttu tracked">
+    <a class="link dim dark-amber dib mr3 f5 b" routerLink="" routerLinkActive="active" title="{{title}}">{{title}}</a>
+    <a class="link dim white dib mr3" routerLink="" routerLinkActive="active" title="Home">Home</a>
+    <a class="link dim white dib mr3" routerLink="parks" routerLinkActive="active" title="Parks">Parks</a>
+    <a class="link dim white dib mr3" routerLink="cities" routerLinkActive="active" title="Cities">Cities</a>
+  </nav>
+</header>
+<div class="pa6">
+  <router-outlet></router-outlet>
 </div>
+
