@@ -1,8 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-import { RouterModule } from '@angular/router';
+import {  HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -10,6 +9,7 @@ import { ParksComponent } from './parks/parks.component';
 import { ParkOneComponent } from './park-one/park-one.component';
 import { ParkTwoComponent } from './park-two/park-two.component';
 import { ParkThreeComponent } from './park-three/park-three.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -23,43 +23,8 @@ import { ParkThreeComponent } from './park-three/park-three.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule,
-    RouterModule.forRoot([
-      {
-        path: 'home',
-        component: HomeComponent
-      },
-      {
-        path: '',
-        redirectTo: 'home',
-        pathMatch: 'full'
-      },
-      {
-        path: 'parks',
-        component: ParksComponent,
-        children: [
-          {
-            path: 'park1',
-            component: ParkOneComponent,
-            outlet: 'parkit'
-          },
-          {
-            path: 'park2',
-            component: ParkTwoComponent,
-            outlet: 'parkit'
-          },
-          {
-            path: 'park3',
-            component: ParkThreeComponent,
-            outlet: 'parkit'
-          }
-        ]
-      },
-      {
-        path: 'cities',
-        loadChildren: './city-module/city.module#CityModule'
-      }
-    ], {useHash: true})
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

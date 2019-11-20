@@ -3,17 +3,15 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-city',
   template: `
+    <div class="ph3">
     <h1>Cities</h1>
-    <img src="/images/camera.svg" width="20" height="20" align="center"> <a routerLink="city1" routerLinkActive="active">City 1</a>
-    <a routerLink="city2" routerLinkActive="active">City 2</a>
-    <a routerLink="city3" routerLinkActive="active">City 3</a>
-    <router-outlet></router-outlet>
+    <a class="f6 link dim br1 ph3 pv2 mb2 dib black b-ns btn-bg" routerLink="city1" routerLinkActive="active">City One</a>
+    <a class="f6 link dim br1 ph3 pv2 mb2 dib black b-ns btn-bg" routerLink="city2" routerLinkActive="active">City Two</a>
+    <a class="f6 link dim br1 ph3 pv2 mb2 dib black b-ns btn-bg" routerLink="city3" routerLinkActive="active">City Three</a>
+   </div>
+  <router-outlet></router-outlet>
   `,
-  styles: [`
-    a.active {
-      background-color: yellow;
-    }
-  `]
+  styles: []
 })
 export class CityComponent implements OnInit {
 

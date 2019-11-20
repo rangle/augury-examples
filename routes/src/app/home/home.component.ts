@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-home',
   template: `
-    <h2>Home</h2>
+    <h1>Home</h1>
     <p>This demo application makes use of routes and lazy loaded child routes.</p>
   `,
   styles: []
