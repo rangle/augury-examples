@@ -32,7 +32,7 @@ export class ReposComponent implements AfterViewInit {
   searchField: FormControl;
   searchForm: FormGroup;
 
-  @ViewChild('searchInput') searchInput: ElementRef;
+  @ViewChild('searchInput', { static: true }) searchInput: ElementRef;
 
   constructor(private repoService: RepoService, private formBuilder: FormBuilder) {
     this.searchField = new FormControl();
