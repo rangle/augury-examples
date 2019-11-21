@@ -8,6 +8,10 @@ const routes: Routes = [
     loadChildren: () => import('./input-output/input-output.module').then(m => m.InputOutputModule)
   },
   {
+    path: 'dependency-injection',
+    loadChildren: () => import('./dependency-injection/dependency-injection.module').then(m => m.DependencyInjectionModule)
+  },
+  {
     path: '**',
     redirectTo: 'input-output'
   }

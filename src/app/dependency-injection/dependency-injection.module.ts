@@ -1,23 +1,24 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
-import { AppComponent } from './app.component';
+import { DependencyInjectionRoutingModule } from './dependency-injection-routing.module';
+import { BaseComponent } from './base.component';
 import { FormNewUserComponent } from './form-new-user/form-new-user.component';
 import { NewUserService } from './new-user.service';
 import { UserInfoComponent } from './user-info/user-info.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    BaseComponent,
     FormNewUserComponent,
     UserInfoComponent
   ],
   imports: [
-    BrowserModule,
+    CommonModule,
     FormsModule,
+    DependencyInjectionRoutingModule
   ],
-  providers: [NewUserService],
-  bootstrap: [AppComponent]
+  providers: [NewUserService]
 })
-export class AppModule { }
+export class DependencyInjectionModule { }

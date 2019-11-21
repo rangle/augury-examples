@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-di-root',
   template: `
   <div class="pa2">
     <div class="ba br4 p2 pl3 mb3 bg-purple white">
@@ -15,8 +15,8 @@ import { Component } from '@angular/core';
     </div>
   </div>
   `,
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./base.component.css']
 })
-export class AppComponent {
+export class BaseComponent {
   title = 'Augury Dependency Injection Demo';
 }

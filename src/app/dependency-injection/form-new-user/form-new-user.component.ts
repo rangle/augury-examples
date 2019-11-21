@@ -34,7 +34,7 @@ import { NewUserService } from '../new-user.service';
 })
 export class FormNewUserComponent {
 
-  constructor( private newUserService: NewUserService ) {
+  constructor(private newUserService: NewUserService) {
   }
 
   onSubmit(data) {

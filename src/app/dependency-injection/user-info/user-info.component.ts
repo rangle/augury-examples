@@ -33,7 +33,7 @@ export class UserInfoComponent {
 
   userInfo;
 
-  constructor( private newUserService: NewUserService ) {
+  constructor(private newUserService: NewUserService) {
     this.newUserService.getStream().subscribe(
       data => this.userInfo = data
     );
