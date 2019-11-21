@@ -1,26 +1,26 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
-import { AppComponent } from './app.component';
+import { InputOutputRoutingModule } from './input-output-routing.module';
+import { MessageEntryComponent } from './messageentry/messageentry.component';
+import { BaseComponent } from './base/base.component';
 import { CounterComponent } from './counter/counter.component';
 import { MessageBoardComponent } from './messageboard/messageboard.component';
-import { MessageEntryComponent } from './messageentry/messageentry.component';
 import { ToggleComponent } from './toggle/toggle.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    BaseComponent,
     CounterComponent,
     MessageBoardComponent,
     MessageEntryComponent,
     ToggleComponent
   ],
   imports: [
-    BrowserModule,
+    CommonModule,
+    InputOutputRoutingModule,
     FormsModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class InputOutputModule { }

@@ -1,15 +1,15 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-io-base',
+  templateUrl: './base.component.html',
+  styleUrls: ['./base.component.css']
 })
-export class AppComponent {
+export class BaseComponent {
   title = 'Augury Input Output Demo';
   count: number;
 
-  @Input() message = "Jumbo Shrimp!";
+  @Input() message = 'Jumbo Shrimp!';
 
   onCountEvent(data) {
     this.count = data;
