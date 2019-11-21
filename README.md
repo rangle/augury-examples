@@ -2,18 +2,23 @@
 
 You will need to have [Angular-CLI](https://github.com/angular/angular-cli) installed.
 
-To run a demo, clone the repo and `cd` into a demo project folder.
+To run a demo, clone the repo and `yarn start` demo project.
 
 ```sh
 git clone https://github.com/rangle/augury-examples.git
 cd augury-examples
 ```
 
-To run the input-output demo for example, type:
+First time you will need to install dependencies by running:
 
 ```sh
-cd input-output
-ng s
+yarn install
+```
+
+To run the demo, type:
+
+```sh
+yarn start
 ```
 
 Open the Chrome browser and in the address-bar, enter: `http://localhost:4200/`.
