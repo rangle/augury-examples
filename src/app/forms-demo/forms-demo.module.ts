@@ -1,27 +1,25 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { CommonModule } from '@angular/common';
 
-import { AppComponent } from './app.component';
+import { BaseComponent } from './base/base.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { ModelFormComponent } from './model-form/model-form.component';
 import { LoginModelFormComponent } from './login-model-form/login-model-form.component';
+import { FormsDemoRoutingModule } from './forms-demo-routing.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    BaseComponent,
     LoginFormComponent,
     ModelFormComponent,
     LoginModelFormComponent
   ],
   imports: [
-    BrowserModule,
+    CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpModule
+    FormsDemoRoutingModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class FormsDemoModule { }

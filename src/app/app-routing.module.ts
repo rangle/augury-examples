@@ -12,6 +12,10 @@ const routes: Routes = [
     loadChildren: () => import('./dependency-injection/dependency-injection.module').then(m => m.DependencyInjectionModule)
   },
   {
+    path: 'forms',
+    loadChildren: () => import('./forms-demo/forms-demo.module').then(m => m.FormsDemoModule)
+  },
+  {
     path: '**',
     redirectTo: 'input-output'
   }
