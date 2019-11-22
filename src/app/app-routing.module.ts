@@ -20,6 +20,10 @@ const routes: Routes = [
     loadChildren: () => import('./modules-demo/modules.module').then(m => m.ModulesModule)
   },
   {
+    path: 'routes',
+    loadChildren: () => import('./routes/routes.module').then(m => m.RoutesModule)
+  },
+  {
     path: '**',
     redirectTo: 'input-output'
   }
