@@ -16,6 +16,10 @@ const routes: Routes = [
     loadChildren: () => import('./forms-demo/forms-demo.module').then(m => m.FormsDemoModule)
   },
   {
+    path: 'modules',
+    loadChildren: () => import('./modules-demo/modules.module').then(m => m.ModulesModule)
+  },
+  {
     path: '**',
     redirectTo: 'input-output'
   }

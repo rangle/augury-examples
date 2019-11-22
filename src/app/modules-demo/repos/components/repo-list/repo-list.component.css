@@ -1,0 +1,17 @@
+.repoItem img {
+    vertical-align: middle;
+    float: left;
+    width: 65px;
+    height: 65px;
+    margin-right: 10px;
+}
+
+.repoItem {
+    height: 70px;
+    padding: 10px 0 10px 0;
+}
+
+.repoItem:hover {
+    color: #5128a5;
+    cursor: pointer;
+}
