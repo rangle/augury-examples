@@ -1,0 +1,27 @@
+<div class="container ph4 pb4 black-80 br3 ma3 center w-70">
+  <p class="f3">New Client (Dynamic Fields with FormArrays)</p>
+    <div>
+      <div class="m2" *ngFor="let item of form?.controls; let i = index">
+      <input type="text"
+             [formControl]="item"
+             placeholder="{{placeholders[i]}}"
+             [ngClass]="{
+              'is-error': item.hasError('minLength') && item.dirty
+             }"
+             class="pa1 mb1 input-reset ba hover-bg-washed-blue hover-dark-blue w-100">
+        <div class="error mt3" *ngIf="item.hasError('minLength')">Location must be greater than 5 characters!</div>
+    </div>
+
+    <button (click)="addLocation()" >Add a Location</button> <button (click)="addEmail()">Add Email</button>
+
+    <div class="mb5">
+      <div class="mt2">
+        <button (click)="save()" class="link mr2 br2 ba bw1 bg-black yellow b--black fl" [disabled]="!form.valid">Save</button>
+        <div *ngIf="!form.valid" class="error mt2">Cannot save, location has to be greater than 5 characters</div>
+      </div>
+    </div>
+
+    <div class="mt2 output">
+      <pre>{{form.value}}</pre>
+    </div>
+</div>

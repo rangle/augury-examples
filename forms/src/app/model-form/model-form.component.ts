@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {FormBuilder, FormGroup, Validators, FormControl} from '@angular/forms';
 
 @Component({
   selector: 'model-form',
@@ -8,6 +8,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class ModelFormComponent implements OnInit {
 
+  welcomeMessage: string;
   fg: FormGroup;
 
   constructor(formBuilder: FormBuilder) {
@@ -15,13 +16,20 @@ export class ModelFormComponent implements OnInit {
       'name': ['Tammy', Validators.required],
       'surname': ['Trinh', Validators.required],
       'email': ['tam@york.tv', Validators.required],
-      'gender': ['female', Validators.required]
+      'gender': ['female', Validators.required],
+      'greeting': ['Greet with message'],
+      'welcome': new FormControl({disabled: true})
     });
   }
 
   ngOnInit() {
   }
-
+/*
+  enableWelcomeMessage () {
+    this.fg.addControl('message');
+    this.welcomeMessage = 'congrats on remembering your password!';
+  }
+*/
   onSubmit(value) {
     console.log(JSON.stringify(value));
   }
