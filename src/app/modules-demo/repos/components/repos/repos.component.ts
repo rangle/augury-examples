@@ -1,32 +1,12 @@
 import { Component, ViewChild, AfterViewInit, ElementRef } from '@angular/core';
-import {
-  FormControl,
-  FormGroup,
-  FormBuilder
-} from '@angular/forms';
+import { FormControl, FormGroup, FormBuilder } from '@angular/forms';
 
 import { RepoService } from '../../../services/repos.service';
 
 @Component({
-  selector: 'my-repos',
+  selector: 'app-repos',
   styleUrls: ['./repos.component.css'],
-  template: `
-    <h2>GitHub Repos</h2>
-    <form [formGroup]="searchForm" (ngSubmit)="search()">
-      <input
-        #searchInput
-        class="search"
-        formControlName="repo"
-        placeholder="Search for GitHub repo"/>
-      <button
-        type="submit"
-        class="f6 link dim br3 ph3 pv2 mb2 dib white bg-light-purple">
-        Submit
-      </button>
-    </form>
-    <hr/>
-    <repo-list [repos]="repos"></repo-list>
-  `
+  templateUrl: './repos.component.html'
 })
 export class ReposComponent implements AfterViewInit {
   repos: any = [];

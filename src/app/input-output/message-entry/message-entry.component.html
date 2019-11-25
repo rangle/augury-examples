@@ -1,0 +1,16 @@
+<form
+  #formRef="ngForm"
+  (ngSubmit)="onSend(formRef.value); formRef.reset();"
+  class="flex items-center">
+  <input
+    type="text"
+    ngModel
+    name="message"
+    class="input-reset ba br3 b--black-20 pa2 mb2 db w-50"
+    placeholder="Type a message" />
+  <button
+    type="submit"
+    class="f6 link dim ml2 br3 ph3 pv2 mb2 dib black btn-bg">
+    Send
+  </button>
+</form>

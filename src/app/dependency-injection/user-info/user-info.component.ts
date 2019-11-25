@@ -3,31 +3,12 @@ import { NewUserService } from '../new-user.service';
 
 @Component({
   selector: 'app-user-info',
-  template: `
-    <div *ngIf="userInfo">
-      <div class="overflow-auto">
-        <table class="f6 w-100 mw8 ba" cellspacing="0">
-          <thead>
-            <tr class="stripe-dark">
-              <th class="fw6 tl pa2 ba bg-white">Name</th>
-              <th class="fw6 tl pa2 ba bg-white">Surname</th>
-              <th class="fw6 tl pa2 ba bg-white">Email</th>
-              <th class="fw6 tl pa2 ba bg-white">Password</th>
-            </tr>
-          </thead>
-          <tbody class="lh-copy">
-            <tr class="stripe-dark">
-              <td class="pa2 ba">{{userInfo.name}}</td>
-              <td class="pa2 ba">{{userInfo.surname}}</td>
-              <td class="pa2 ba">{{userInfo.email}}</td>
-              <td class="pa2 ba">{{userInfo.password}}</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  `,
-  styles: []
+  templateUrl: './user-info.component.html',
+  styles: [`
+  .stripe-purple:nth-child(odd) {
+    background-color: rgba(164, 99, 242, 0.1);
+  }
+  `]
 })
 export class UserInfoComponent {
 

@@ -1,0 +1,15 @@
+<h2>GitHub Repos</h2>
+    <form [formGroup]="searchForm" (ngSubmit)="search()">
+      <input
+        #searchInput
+        class="search"
+        formControlName="repo"
+        placeholder="Search"/>
+      <button
+        type="submit"
+        class="f6 link dim br3 ph3 ml2 pv2 mb2 dib black btn-bg">
+        Submit
+      </button>
+    </form>
+    <hr/>
+    <app-repo-list [repos]="repos"></app-repo-list>

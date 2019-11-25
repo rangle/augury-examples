@@ -1,32 +1,32 @@
-<div class="container ph4 pb4 black-80 br3 ma3 center w-70">
-  <p class="f3">Login (Template based)</p>
-  <form #formRef="ngForm" (ngSubmit)="onSubmit(formRef.value); formRef.reset()" class="measure center">
+<div class="container ph4 pb4 black-80 br3 mt6 ma3 center w-70">
+  <p class="f3 b">Login: Template based</p>
+  <form class="measure center" #formRef="ngForm" (ngSubmit)="onSubmit(formRef); formRef.reset()">
     <div class="mt3">
-      <label for="userid" class="db fw6 lh-copy f5">Username</label>
+      <label for="userid" class="db lh-copy f5">Username</label>
       <input type="text"
              name="userid"
              ngModel
              required
-             class="pa1 input-reset ba hover-bg-washed-blue hover-dark-blue w-100">
+             class="pa1 ba b--black-20 br3 input-reset hover-bg-washed-blue hover-dark-blue w-100">
     </div>
 
     <div class="mt3">
-      <label for="password" class="db fw6 lh-copy f5">Password</label>
+      <label for="password" class="db lh-copy f5">Password</label>
       <input type="password"
              name="password"
              ngModel
              required
              minlength="5"
-             class="pa1 input-reset ba hover-bg-washed-blue hover-dark-blue w-100">
+             class="pa1 ba b--black-20 br3 input-reset hover-bg-washed-blue hover-dark-blue w-100">
     </div>
 
     <div class="mt3">
       <label for="remember" >
-        <input type="checkbox" name="remember" ngModel class="fw6 lh-copy f5">
+        <input type="checkbox" name="remember" ngModel class="lh-copy f5">
         Remember
       </label>
     </div>
 
-    <button class="link br2 ba bw1 bg-black yellow b--black fl mt3" type="submit" [disabled]="!formRef.valid">Login</button>
+    <button class="link br2 bw3 btn-bg white fl mt3" type="submit" [disabled]="!formRef.valid">Login</button>
   </form>
 </div>

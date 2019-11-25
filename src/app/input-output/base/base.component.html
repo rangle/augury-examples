@@ -1,17 +1,19 @@
-<div class="pa2">
-  <div class="ba br4 p2 pl3 mb3 bg-purple white">
-    <h1>{{title}}</h1>
-  </div>
+<header class="bg-purple fixed w-100 ph3 pv3 pv4-ns ph4-m ph5-l">
+  <nav class="f6 fw6 ttu tracked">
+    <a class="link dim amber dib mr3 f3 b" title="{{title}}">{{title}}</a>
+  </nav>
+</header>
+<div class="pt6 ph3">
   <div class="fl w-50">
-    Giant Message Board
+    <div class="pb2">Giant Message Board</div>
     <div>
-      <app-messageboard [message]="message"></app-messageboard>
+      <app-message-board [message]="message"></app-message-board>
     </div>
-    <div class="pb2">
+    <div class="pb2 pt3_5">
       Message Entry
     </div>
     <div>
-      <app-messageentry (messageEvent)="onMessageEvent($event)"></app-messageentry>
+      <app-message-entry (messageEvent)="onMessageEvent($event)"></app-message-entry>
     </div>
   </div>
   <div class="fl w-50 bl pl2">

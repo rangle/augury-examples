@@ -5,12 +5,28 @@
   font-family: "Roboto", sans-serif;
 }
 
-body {
+/* body {
   background: #f1e0ff;
-}
+} */
 
 .btn-bg {
   background: #ffa000;
   border-color: #ffa000;
   margin-right: 5px;
+}
+
+.amber {
+  color: #ffd149;
+}
+
+.dark-amber-bg {
+  background: #c67100
+
+
+
+  ;
+}
+
+.bg-purple {
+  background: #5128a5;
 }

@@ -9,10 +9,10 @@ import {
   selector: 'app-counter',
   template: `
     <h3>Count: {{ count }}</h3>
-    <button (click)="onDecrement()" class="f6 link dim br3 ph3 pv2 mb2 dib white bg-light-purple">
+    <button (click)="onDecrement()" class="f6 link dim br4 ph3 pv2 mb2 dib black btn-bg">
       -
     </button>
-    <button (click)="onIncrement()" class="f6 link dim br3 ph3 pv2 mb2 dib white bg-light-purple">
+    <button (click)="onIncrement()" class="f6 link dim br4 ph3 pv2 mb2 dib black btn-bg">
       +
     </button>
   `,
