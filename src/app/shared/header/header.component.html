@@ -1,0 +1,19 @@
+<header class="bg-purple fixed w-100 ph3 pv3 pv4-ns ph4-m ph5-l">
+  <nav class="f6 fw6 ttu tracked">
+    <ng-container *ngFor="let item of navItems ">
+        <a *ngIf="!item.isNavItem; else navItem"
+        class="link dim amber dib mr3 b"
+        routerLink="item.routerLinkPath"
+        routerLinkActive="active"
+        [ngClass]="item.headerOnly ? 'f3' : 'f5'"
+        [title]="item.title">{{item.title}}</a>
+        <ng-template #navItem>
+            <a [ngClass]="{'link dim white dib mr3':item.defaultStyle}"
+               [class]="item.customStyle"
+               routerLink="item.routerLinkPath"
+               routerLinkActive="active"
+               [title]="item.title">{{item.title}}</a>
+        </ng-template>
+    </ng-container>
+    </nav>
+</header>

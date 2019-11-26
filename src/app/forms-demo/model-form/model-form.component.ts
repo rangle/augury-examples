@@ -8,22 +8,21 @@ import { FormBuilder, FormGroup, Validators, NgForm } from '@angular/forms';
 })
 export class ModelFormComponent implements OnInit {
 
-  fg: FormGroup;
+  fg = this.formBuilder.group({
+    name: ['Tammy', Validators.required],
+    surname: ['Trinh', Validators.required],
+    email: ['tam@york.tv', Validators.required],
+    gender: ['female', Validators.required]
+  });
 
-  constructor(formBuilder: FormBuilder) {
-    this.fg = formBuilder.group({
-      name: ['Tammy', Validators.required],
-      surname: ['Trinh', Validators.required],
-      email: ['tam@york.tv', Validators.required],
-      gender: ['female', Validators.required]
-    });
-  }
+  constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit() {
   }
 
-  onSubmit(form: NgForm) {
-    console.log(form.value);
+  onSubmit() {
+    console.log(this.fg);
+    console.log(this.fg.value);
   }
 
 }

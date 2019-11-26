@@ -8,6 +8,7 @@ import { BaseComponent } from './base/base.component';
 import { CounterComponent } from './counter/counter.component';
 import { MessageBoardComponent } from './message-board/message-board.component';
 import { ToggleComponent } from './toggle/toggle.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { ToggleComponent } from './toggle/toggle.component';
     CommonModule,
     InputOutputRoutingModule,
     FormsModule,
+    SharedModule
   ],
 })
 export class InputOutputModule { }

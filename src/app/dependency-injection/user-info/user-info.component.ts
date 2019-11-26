@@ -6,7 +6,7 @@ import { NewUserService } from '../new-user.service';
   templateUrl: './user-info.component.html',
   styles: [`
   .stripe-purple:nth-child(odd) {
-    background-color: rgba(164, 99, 242, 0.1);
+    background-color: rgba(241, 224, 255, 0.7);
   }
   `]
 })

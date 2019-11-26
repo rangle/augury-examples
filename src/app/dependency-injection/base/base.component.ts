@@ -1,13 +1,10 @@
 import { Component } from '@angular/core';
+import { NavItem } from 'src/app/shared/nav-item';
 
 @Component({
   selector: 'app-di-root',
   template: `
-    <header class="bg-purple fixed w-100 ph3 pv3 pv4-ns ph4-m ph5-l">
-      <nav class="f6 fw6 ttu tracked">
-        <a class="link dim amber dib mr3 f3 b" title="{{title}}">{{title}}</a>
-      </nav>
-    </header>
+  <app-header [navItems]="navModel"></app-header>
     <div class="pt6 ph3">
       <div class="center">
         <app-form-new-user></app-form-new-user>
@@ -20,5 +17,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./base.component.css']
 })
 export class BaseComponent {
-  title = 'Augury Dependency Injection Demo';
+  navModel: NavItem[] = [
+    {
+      title: 'Augury Dependency Injection Demo',
+      defaultStyle: true,
+      headerOnly: true
+    }
+  ];
 }

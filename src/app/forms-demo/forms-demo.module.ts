@@ -7,6 +7,7 @@ import { LoginFormComponent } from './login-form/login-form.component';
 import { ModelFormComponent } from './model-form/model-form.component';
 import { LoginModelFormComponent } from './login-model-form/login-model-form.component';
 import { FormsDemoRoutingModule } from './forms-demo-routing.module';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { FormsDemoRoutingModule } from './forms-demo-routing.module';
   ],
   imports: [
     CommonModule,
+    SharedModule,
     FormsModule,
     ReactiveFormsModule,
     FormsDemoRoutingModule
