@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-city-three',
   template: `
   <div>
-    <img src="/assets/montreal.jpg"/>
+    <img src="assets/montreal.jpg"/>
   </div>
   `,
   styles: []
