@@ -7,6 +7,7 @@ import { BaseComponent } from './base/base.component';
 import { FormNewUserComponent } from './form-new-user/form-new-user.component';
 import { NewUserService } from './new-user.service';
 import { UserInfoComponent } from './user-info/user-info.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -16,8 +17,9 @@ import { UserInfoComponent } from './user-info/user-info.component';
   ],
   imports: [
     CommonModule,
+    DependencyInjectionRoutingModule,
     FormsModule,
-    DependencyInjectionRoutingModule
+    SharedModule
   ],
   providers: [NewUserService]
 })

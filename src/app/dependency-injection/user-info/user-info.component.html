@@ -1,0 +1,22 @@
+<div class="pt4 pl6" *ngIf="userInfo">
+  <div class="overflow-auto">
+    <table class="f6 w-100 mw8" cellspacing="0">
+      <thead>
+        <tr class="stripe-purple">
+          <th class="fw6 tl pa3 bg-white">Name</th>
+          <th class="fw6 tl pa3 bg-white">Surname</th>
+          <th class="fw6 tl pa3 bg-white">Email</th>
+          <th class="fw6 tl pa3 bg-white">Password</th>
+        </tr>
+      </thead>
+      <tbody class="lh-copy">
+        <tr class="stripe-purple">
+          <td class="pa3">{{userInfo.name}}</td>
+          <td class="pa3">{{userInfo.surname}}</td>
+          <td class="pa3">{{userInfo.email}}</td>
+          <td class="pa3">{{userInfo.password}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

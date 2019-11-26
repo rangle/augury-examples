@@ -6,6 +6,7 @@ import { ModulesRoutingModule } from './modules-routing.module';
 import { BaseComponent } from './base/base.component';
 import { Logger } from './services/logger.service';
 import { ReposModule } from './repos/repos.module';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ReposModule } from './repos/repos.module';
     CommonModule,
     HttpClientModule,
     ModulesRoutingModule,
-    ReposModule
+    ReposModule,
+    SharedModule
   ],
   providers: [Logger],
   bootstrap: [BaseComponent]

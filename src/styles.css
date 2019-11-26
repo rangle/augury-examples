@@ -2,15 +2,24 @@
 @import "../node_modules/tachyons/css/tachyons.min.css";
 
 :root {
-  font-family: "Roboto", sans-serif;
-}
+  font-family: "Roboto","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
 
-body {
-  background: #f1e0ff;
 }
 
 .btn-bg {
   background: #ffa000;
   border-color: #ffa000;
   margin-right: 5px;
+}
+
+.amber {
+  color: #ffd149;
+}
+
+.dark-amber-bg {
+  background: #c67100;
+}
+
+.bg-purple {
+  background: #5128a5;
 }

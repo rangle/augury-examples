@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavItem } from 'src/app/shared/nav-item';
 
 @Component({
   selector: 'app-forms-root',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./base.component.css']
 })
 export class BaseComponent {
-  title = 'Augury Forms Demo';
+  navModel: NavItem[] = [
+    {
+      title: 'Augury Forms Demo',
+      defaultStyle: true,
+      headerOnly: true
+    }
+  ];
 }

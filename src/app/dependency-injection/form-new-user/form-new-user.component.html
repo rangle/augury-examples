@@ -1,0 +1,28 @@
+<form #formRef="ngForm">
+  <div class="dt dt--fixed w-100 pt2">
+    <div class="dt dt--fixed">
+      <label for="name" class="fl w-20 tr pt1 pr4 mb2 f4">Name</label>
+      <input class="fl ba pa2 b--black-20 w-40 mb2 br3" type="text" id="name" name="name" ngModel required />
+    </div>
+    <div class="dt dt--fixed">
+      <label for="surname" class="fl w-20 tr pt1 pr4 mb2 f4">Surname</label>
+      <input class="fl ba pa2 b--black-20 w-40 mb2 br3" type="text" id="surname" name="surname" ngModel required />
+    </div>
+    <div class="dt dt--fixed">
+      <label for="email" class="fl w-20 tr pt1 pr4 mb2 f4">Email</label>
+      <input class="fl ba pa2 b--black-20 w-40 mb2 br3" type="text" id="email" name="email" ngModel required />
+    </div>
+    <div class="dt dt--fixed">
+      <label for="password" class="fl w-20 tr pt1 pr4 mb2 f4">Password</label>
+      <input class="fl ba pa2 b--black-20 w-40 mb2 br3" type="password" id="password" name="password" ngModel required />
+      <label for="surname" class="fl w-20 tr pr2 mb2">&nbsp;</label>
+    </div>
+    <div class="dt dt--fixed">
+      <div class="fl ml6 mt2">
+        <button (click)="onSubmit(formRef.value); formRef.reset();"
+       [disabled]="!formRef.valid"
+       class="link br2 bw3 btn-bg tr black fl ml6">Create</button>
+      </div>
+    </div>
+  </div>
+</form>

@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { NavItem } from 'src/app/shared/nav-item';
 
 @Component({
   selector: 'app-io-base',
@@ -6,7 +7,13 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./base.component.css']
 })
 export class BaseComponent {
-  title = 'Augury Input Output Demo';
+  navModel: NavItem[] = [
+    {
+      title: 'Augury Input Output Demo',
+      defaultStyle: true,
+      headerOnly: true
+    }
+  ];
   count: number;
 
   @Input() message = 'Jumbo Shrimp!';

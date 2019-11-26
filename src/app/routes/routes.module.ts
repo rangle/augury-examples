@@ -10,6 +10,7 @@ import { ParkOneComponent } from './park-one/park-one.component';
 import { ParkTwoComponent } from './park-two/park-two.component';
 import { ParkThreeComponent } from './park-three/park-three.component';
 import { RoutesRoutingModule } from './routes-routing.module';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { RoutesRoutingModule } from './routes-routing.module';
     CommonModule,
     FormsModule,
     HttpClientModule,
-    RoutesRoutingModule
+    RoutesRoutingModule,
+    SharedModule
   ]
 })
 export class RoutesModule { }
