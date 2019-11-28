@@ -36,6 +36,5 @@ export class BaseComponent {
 
   title = 'Angular Routes Demo';
 
-  constructor() {
-  }
+  constructor() {}
 }
