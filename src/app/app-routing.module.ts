@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-
 const routes: Routes = [
   {
     path: 'input-output',
@@ -9,7 +8,8 @@ const routes: Routes = [
   },
   {
     path: 'dependency-injection',
-    loadChildren: () => import('./dependency-injection/dependency-injection.module').then(m => m.DependencyInjectionModule)
+    loadChildren: () =>
+      import('./dependency-injection/dependency-injection.module').then(m => m.DependencyInjectionModule)
   },
   {
     path: 'forms',
@@ -24,6 +24,10 @@ const routes: Routes = [
     loadChildren: () => import('./routes/routes.module').then(m => m.RoutesModule)
   },
   {
+    path: 'kitchen-sink',
+    loadChildren: () => import('./kitchen-sink/kitchen-sink.module').then(m => m.KitchenSinkModule)
+  },
+  {
     path: '**',
     redirectTo: 'input-output'
   }
@@ -33,4 +37,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
