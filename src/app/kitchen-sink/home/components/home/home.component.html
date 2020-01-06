@@ -1,8 +1,5 @@
-<div class="flex pa2 bg-purple-500">
-  <h1>Kitchen Sink</h1>
-</div>
-<div class="flex">
-  <div class="w-20 pa3 bg-red-300">
+<div class="flex h-screen">
+  <div class="w-20 pa3 bg-light-yellow">
     <ul class="nav nav-pills nav-stacked">
       <li class="pa2 blue" [ngClass]="{ active: path == 'home' }">
         <a [routerLink]="['/kitchen-sink']">Home</a>
@@ -28,7 +25,7 @@
       <li class="pa2 blue" [ngClass]="{ active: path == 'di-tree' }">
         <a [routerLink]="['/kitchen-sink', 'di-tree']">DITree</a>
       </li>
-      <li class="pa2 blue" [ngClass]="{ active: path == 'angular-directives' }">
+      <!-- <li class="pa2 blue" [ngClass]="{ active: path == 'angular-directives' }">
         <a [routerLink]="['/kitchen-sink', 'angular-directives']">AngularDirectives</a>
       </li>
       <li class="pa2 blue" [ngClass]="{ active: path == 'change-detection' }">
@@ -39,11 +36,11 @@
       </li>
       <li class="pa2 blue" [ngClass]="{ active: path == 'metadata-test' }">
         <a [routerLink]="['/kitchen-sink', './metadata-test']">MetadataTest</a>
-      </li>
+      </li> -->
     </ul>
   </div>
-  <div class="w-80 pa3 bg-blue-300">
-    <h1>{{ path || 'home' }}</h1>
+  <div class="w-80 pa3 bg-light-green">
+    <h1>{{ title }}</h1>
     <router-outlet></router-outlet>
   </div>
 </div>

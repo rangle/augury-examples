@@ -1,35 +1,28 @@
-import {Component} from '@angular/core';
-import {TodoService} from '../services/todo.service';
+import { Component } from '@angular/core';
+import { TodoService } from '../services/todo.service';
 
 @Component({
   selector: 'todo-list',
   template: `
-  <table class="table table-bordered">
-    <tr>
-      <th>Title</th>
-      <th>Status</th>
-      <th>Actions</th>
-    </tr>
-    <tr *ngFor="let todo of todoService.todos">
-      <td>{{todo.title}}</td>
-      <td>
-        <h4 [ngSwitch]="todo.status">
-            <p class="label label-success"
-             *ngSwitchCase="'started'">Started</p>
-            <p class="label label-primary"
-             *ngSwitchCase="'completed'">Completed</p>
-        </h4>
-      </td>
-      <td><button
-         class="btn btn-warning"
-        (click)="todo.toggle()">Toggle</button></td>
-    </tr>
-  </table>
+    <table class="w-100">
+      <tr>
+        <th class="ba b--black-40 pa2">Title</th>
+        <th class="ba b--black-40 pa2">Status</th>
+        <th class="ba b--black-40 pa2">Actions</th>
+      </tr>
+      <tr *ngFor="let todo of todoService.todos">
+        <td class="ba b--black-40 pa2">{{ todo.title }}</td>
+        <td class="ba b--black-40 pa2">
+          <p class="white bg-dark-red pa2 br2" *ngIf="todo.status == 'started'">Started</p>
+          <p class="white bg-dark-green pa2 br2" *ngIf="todo.status == 'completed'">Completed</p>
+        </td>
+        <td class="ba b--black-40 pa2">
+          <button class="br4 pt2 pb2 pl4 pr4 white bg-dark-blue" (click)="todo.toggle()">Toggle</button>
+        </td>
+      </tr>
+    </table>
   `
 })
 export class TodoListComponent {
-
-  constructor(
-    public todoService: TodoService
-  ) {}
+  constructor(public todoService: TodoService) {}
 }
