@@ -1,0 +1,46 @@
+<div class="flex vh-100">
+  <div class="w-20 bg-light-yellow">
+    <ul class="list">
+      <li class="pa2" [ngClass]="{ active: path == 'home' }">
+        <a [routerLink]="['/kitchen-sink']">Home</a>
+      </li>
+      <!-- <li class="pa2" [ngClass]="{ active: path == 'welcome' }">
+        <a [routerLink]="['/kitchen-sink', 'lazy-load/lazy']">Lazy Loaded Module</a>
+      </li> -->
+      <li class="pa2" [ngClass]="{ active: path == 'control-form' }">
+        <a [routerLink]="['/kitchen-sink', 'control-form']">ControlForm</a>
+      </li>
+      <li class="pa2" [ngClass]="{ active: path == 'my-form' }">
+        <a [routerLink]="['/kitchen-sink', 'my-form']">Form Component</a>
+      </li>
+      <li class="pa2" [ngClass]="{ active: path == 'form2' }">
+        <a [routerLink]="['/kitchen-sink', 'form2']">NgModel Form</a>
+      </li>
+      <li class="pa2" [ngClass]="{ active: path == 'input-output' }">
+        <a [routerLink]="['/kitchen-sink', 'input-output']">InputOutput</a>
+      </li>
+      <li class="pa2" [ngClass]="{ active: path == 'todo-app' }">
+        <a [routerLink]="['/kitchen-sink', 'todo-app']">TodoApp</a>
+      </li>
+      <li class="pa2" [ngClass]="{ active: path == 'di-tree' }">
+        <a [routerLink]="['/kitchen-sink', 'di-tree']">DITree</a>
+      </li>
+      <!-- <li class="pa2" [ngClass]="{ active: path == 'angular-directives' }">
+        <a [routerLink]="['/kitchen-sink', 'angular-directives']">AngularDirectives</a>
+      </li>
+      <li class="pa2" [ngClass]="{ active: path == 'change-detection' }">
+        <a [routerLink]="['/kitchen-sink', 'change-detection']">ChangeDetection</a>
+      </li>
+      <li class="pa2" [ngClass]="{ active: path == 'stress-tester' }">
+        <a [routerLink]="['/kitchen-sink', './stress-tester']">StressTester</a>
+      </li>
+      <li class="pa2" [ngClass]="{ active: path == 'metadata-test' }">
+        <a [routerLink]="['/kitchen-sink', './metadata-test']">MetadataTest</a>
+      </li> -->
+    </ul>
+  </div>
+  <div class="w-80 pa3 bg-light-green">
+    <h1>{{ title }}</h1>
+    <router-outlet></router-outlet>
+  </div>
+</div>
