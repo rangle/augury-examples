@@ -47,7 +47,7 @@ import { FormControl, FormGroup } from '@angular/forms';
         </div>
         <div class="flex pa2">
           <label class="w-third"></label>
-          <button type="submit" class="br4 pt2 pb2 pl4 pr4 white bg-dark-green">Submit</button>
+          <button type="submit" class="br4 pt2 pb2 pl4 pr4 bn white bg-dark-green">Submit</button>
         </div>
       </form>
     </div>

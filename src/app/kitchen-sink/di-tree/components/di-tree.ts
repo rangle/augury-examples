@@ -8,11 +8,11 @@ import { Service1 } from '../services/service1';
     <p class="link blue">
       DI App
     </p>
-    <p class="pl2">{{ service1Value }}</p>
-    <br />
-    <component1></component1>
-    <br />
-    <component2></component2>
+    <p>{{ service1Value }}</p>
+    <div class="pl4">
+      <component1></component1>
+      <component2></component2>
+    </div>
   `
 })
 export class DITreeComponent {

@@ -8,11 +8,11 @@ import { Service2 } from '../services/service2';
     <p class="link blue">
       Component Two
     </p>
-    <p class="pl2">{{ service2Value }}</p>
-    <br />
-    <component5></component5>
-    <br />
-    <component6></component6>
+    <p>{{ service2Value }}</p>
+    <div class="pl4">
+      <component5></component5>
+      <component6></component6>
+    </div>
   `
 })
 export class Component2 {

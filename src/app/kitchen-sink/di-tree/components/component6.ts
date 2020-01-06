@@ -7,8 +7,8 @@ import { Service2 } from '../services/service2';
   selector: 'component6',
   template: `
     <p class="link blue">Component Six</p>
-    <p class="pl2">{{ service1Value }}</p>
-    <p class="pl2">{{ service2Value }}</p>
+    <p>{{ service1Value }}</p>
+    <p>{{ service2Value }}</p>
   `
 })
 export class Component6 {

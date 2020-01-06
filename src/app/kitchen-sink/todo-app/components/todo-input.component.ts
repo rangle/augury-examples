@@ -10,7 +10,7 @@ import { FormatService } from '../services/format.service';
       <form (ngSubmit)="onSubmit()" class="flex">
         <input type="text" [(ngModel)]="todoModel.title" required class="ba pa2" name="title" />
         &nbsp;&nbsp;
-        <button class="br4 pt2 pb2 pl4 pr4 white bg-dark-blue">Add Todo</button>
+        <button class="bn br4 pt2 pb2 pl4 pr4 white bg-dark-blue">Add Todo</button>
       </form>
     </div>
   `

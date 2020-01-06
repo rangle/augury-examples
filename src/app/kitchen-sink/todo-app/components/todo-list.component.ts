@@ -17,7 +17,7 @@ import { TodoService } from '../services/todo.service';
           <p class="white bg-dark-green pa2 br2" *ngIf="todo.status == 'completed'">Completed</p>
         </td>
         <td class="ba b--black-40 pa2">
-          <button class="br4 pt2 pb2 pl4 pr4 white bg-dark-blue" (click)="todo.toggle()">Toggle</button>
+          <button class="bn br4 pt2 pb2 pl4 pr4 white bg-dark-blue" (click)="todo.toggle()">Toggle</button>
         </td>
       </tr>
     </table>

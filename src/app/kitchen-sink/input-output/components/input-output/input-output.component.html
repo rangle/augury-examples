@@ -1,16 +1,13 @@
 <h4>Parent Num: {{ num }}</h4>
-<br />
 <h4>Parent Count: {{ parentCount }}</h4>
-<br />
 <counter [count]="num" (result)="onChange($event)" (displayMessage)="displayMessage($event)"> </counter>
 <div *ngIf="name && message" class="pt2 pb2">
-  <br />
   <h4>{{ name }}: {{ message }}</h4>
 </div>
 <br />
 
 <button
-  class="br4 pt2 pb2 pl4 pr4 white bg-dark-green"
+  class="br4 pt2 pb2 pl4 pr4 white bg-dark-green bn"
   [ngClass]="{ active: isOn, disabled: isDisabled }"
   (click)="toggle(!isOn)"
 >
