@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 
+@Injectable()
 export class Service2 {
   value = 'Service Two';
   constructor() {

@@ -21,10 +21,10 @@ const TITLES = {
 })
 export class HomeComponent {
   title: string;
-  constructor(private router: Router) {
-    router.events.pipe(filter(e => e instanceof NavigationEnd)).subscribe((e: NavigationEnd) => {
-      const path = e.url.replace('/kitchen-sink', '').replace('/', '');
-      this.title = TITLES[path];
-    });
-  }
+  // constructor(private router: Router) {
+  //   router.events.pipe(filter(e => e instanceof NavigationEnd)).subscribe((e: NavigationEnd) => {
+  //     const path = e.url.replace('/kitchen-sink', '').replace('/', '');
+  //     this.title = TITLES[path];
+  //   });
+  // }
 }
