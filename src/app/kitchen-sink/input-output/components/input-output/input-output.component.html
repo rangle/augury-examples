@@ -5,10 +5,9 @@
   <h4>{{ name }}: {{ message }}</h4>
 </div>
 <br />
-
 <button
-  class="br4 pt2 pb2 pl4 pr4 white bg-dark-green bn"
-  [ngClass]="{ active: isOn, disabled: isDisabled }"
+  class="br4 pt2 pb2 pl4 pr4 white bn"
+  [ngClass]="{ 'bg-dark-blue': isOn, 'bg-dark-green': !isOn }"
   (click)="toggle(!isOn)"
 >
   Click me!
