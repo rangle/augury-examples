@@ -1,1 +1,12 @@
-<router-outlet></router-outlet>
+<div class="flex w-100 h-100">
+  <aside class="w-20 bg-purple pa3">
+    <nav class="flex flex-column bg-gray-500">
+      <a [attr.href]="link.href" *ngFor="let link of links" class="pa2 amber">
+        {{link.title}}
+      </a>
+    </nav>
+  </aside>
+  <div class="w-80">
+    <router-outlet></router-outlet>
+  </div>
+</div>

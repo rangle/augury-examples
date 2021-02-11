@@ -1,5 +1,7 @@
-<div class="flex vh-100">
-  <div class="w-20 bg-light-yellow">
+<div class="flex flex-column vh-100">
+  <app-header [navItems]="navModel"></app-header>
+  <div class="flex h-100">
+  <div class="w-20 bg-light-gray pt5 mt4">
     <ul class="list">
       <li class="pa2" [ngClass]="{ active: path == 'home' }">
         <a [routerLink]="['/kitchen-sink']">Home</a>
@@ -39,8 +41,9 @@
       </li> -->
     </ul>
   </div>
-  <div class="w-80 pa3 bg-light-green">
+  <div class="w-80 pa3 bg-white-40 mt5">
     <h1>{{ title }}</h1>
     <router-outlet></router-outlet>
   </div>
+</div>
 </div>

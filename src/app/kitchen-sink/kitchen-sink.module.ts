@@ -14,7 +14,7 @@ import { STRESS_TESTER_COMPONENTS } from './stress-tester';
 import { METADATA_TEST_COMPONENTS } from './metadata-test';
 import { TODO_APP_SERVICES, TODO_APP_COMPONENTS } from './todo-app';
 import { CommonModule } from '@angular/common';
-
+import { SharedModule } from '../shared/shared.module';
 @NgModule({
   declarations: [
     HomeComponent,
@@ -30,7 +30,7 @@ import { CommonModule } from '@angular/common';
     ...METADATA_TEST_COMPONENTS,
     ...TODO_APP_COMPONENTS
   ],
-  imports: [FormsModule, ReactiveFormsModule, CommonModule, KitchenSinkRoutingModule],
+  imports: [FormsModule, ReactiveFormsModule, CommonModule, SharedModule, KitchenSinkRoutingModule],
   providers: [...DI_TREE_SERVICES, ...TODO_APP_SERVICES]
 })
 export class KitchenSinkModule {}

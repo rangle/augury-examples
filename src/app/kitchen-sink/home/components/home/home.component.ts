@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 import { map, filter } from 'rxjs/operators';
+import { NavItem } from '../../../../shared/nav-item';
 
 const TITLES = {
   '': 'Home',
@@ -21,6 +22,14 @@ const TITLES = {
 })
 export class HomeComponent {
   title: string;
+  navModel: NavItem[] = [
+    {
+      title: 'Kitchen Sink Demo',
+      defaultStyle: true,
+      headerOnly: true
+    }
+  ];
+  
   constructor(private router: Router) {
     router.events.pipe(filter(e => e instanceof NavigationEnd)).subscribe((e: NavigationEnd) => {
       const path = e.url.replace('/kitchen-sink', '').replace('/', '');
