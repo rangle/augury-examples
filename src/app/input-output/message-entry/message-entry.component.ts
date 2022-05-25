@@ -13,7 +13,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 export class MessageEntryComponent {
   @Output() messageEvent = new EventEmitter<string>();
 
-  onSend(data) {
+  onSend(data: any) {
     this.messageEvent.emit(data.message);
   }
 }

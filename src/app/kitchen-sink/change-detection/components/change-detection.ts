@@ -30,7 +30,7 @@ import {User} from '../models/user';
   `
 })
 export default class ChangeDetectionComponent {
-  private user = new User(1, 'John Doe', 'john@doe.com');
+  user = new User(1, 'John Doe', 'john@doe.com');
 
   reset() {
     this.user = new User(1, 'John Doe', 'john@doe.com');

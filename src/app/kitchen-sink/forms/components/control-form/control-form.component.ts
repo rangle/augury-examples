@@ -14,7 +14,6 @@ import { FormControl, FormGroup } from '@angular/forms';
             id="name"
             placeholder="Name"
             class="ba pa2 w-50"
-            [formControl]="formGroup.controls['name']"
           />
         </div>
         <div class="flex pa2">
@@ -24,7 +23,7 @@ import { FormControl, FormGroup } from '@angular/forms';
             id="email"
             placeholder="Email"
             class="ba pa2 w-50"
-            [formControl]="formGroup.controls['email']"
+            
           />
         </div>
         <div class="flex pa2">

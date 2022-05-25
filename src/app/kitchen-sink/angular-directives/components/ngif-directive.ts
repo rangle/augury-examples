@@ -18,7 +18,7 @@ import {Component} from '@angular/core';
   `
 })
 export default class NgIfDirective {
-  private sayHello: boolean = false;
+  sayHello: boolean = false;
 
   toggle() {
     this.sayHello = !this.sayHello;

@@ -15,7 +15,7 @@ export class FormNewUserComponent {
   constructor(private newUserService: NewUserService) {
   }
 
-  onSubmit(data) {
+  onSubmit(data: any) {
     this.newUserService.registerNewUser(data);
   }
 

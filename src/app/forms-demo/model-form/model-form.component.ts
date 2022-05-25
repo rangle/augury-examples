@@ -8,7 +8,7 @@ import { FormBuilder, FormGroup, Validators, NgForm } from '@angular/forms';
 })
 export class ModelFormComponent implements OnInit {
 
-  fg = this.formBuilder.group({
+  fg: any = this.formBuilder.group({
     name: ['Tammy', Validators.required],
     surname: ['Trinh', Validators.required],
     email: ['tam@york.tv', Validators.required],

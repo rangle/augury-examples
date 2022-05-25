@@ -11,8 +11,7 @@ import {Component} from '@angular/core';
    <hr>
    <label>Italic: <input type="checkbox" (change)="changeStyle($event)"></label>
    <label>Bold: <input type="checkbox" (change)="changeWeight($event)"></label>
-   <label>Size: <input type="text" [value]="size"
-   (change)="size = $event.target.value"></label>
+   <label>Size: <input type="text" [value]="size"></label>
  `
 })
 export default class NgStyleDirective {

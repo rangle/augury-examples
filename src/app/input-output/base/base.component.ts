@@ -14,15 +14,15 @@ export class BaseComponent {
       headerOnly: true
     }
   ];
-  count: number;
+  count: number = 0;
 
   @Input() message = 'Jumbo Shrimp!';
 
-  onCountEvent(data) {
+  onCountEvent(data: any) {
     this.count = data;
   }
 
-  onMessageEvent(data) {
+  onMessageEvent(data: any) {
     this.message = data;
     console.log(data);
   }

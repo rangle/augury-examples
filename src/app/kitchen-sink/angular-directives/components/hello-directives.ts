@@ -9,5 +9,5 @@ import {Component, Input} from '@angular/core';
   `
 })
 export default class HelloDirectives {
-  @Input() msg: string;
+  @Input() msg: string = '';
 }

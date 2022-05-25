@@ -13,7 +13,7 @@ export class ReposComponent implements AfterViewInit {
   searchField: FormControl;
   searchForm: FormGroup;
 
-  @ViewChild('searchInput', { static: true }) searchInput: ElementRef;
+  @ViewChild('searchInput', { static: true }) searchInput: any;
 
   constructor(private repoService: RepoService, private formBuilder: FormBuilder) {
     this.searchField = new FormControl();

@@ -28,7 +28,7 @@ export default class NgClassDirective {
   isOn = false;
   @Input() isDisabled: boolean = false;
 
-  toggle(newState) {
+  toggle(newState: boolean) {
     if (!this.isDisabled) {
       this.isOn = newState;
     }

@@ -28,9 +28,9 @@ import {Component} from '@angular/core';
   `
 })
 export default class NgSwitchDirective {
-  private color = 'red';
+  color = 'red';
 
-  private colors = [
+  colors = [
     'red',
     'green',
     'yellow',

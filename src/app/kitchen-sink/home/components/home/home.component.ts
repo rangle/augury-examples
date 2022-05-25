@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 import { map, filter } from 'rxjs/operators';
 
-const TITLES = {
+const TITLES: any = {
   '': 'Home',
   home: 'Home',
   'control-form': 'Control Form',
@@ -20,11 +20,12 @@ const TITLES = {
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  title: string;
+  title: string = '';
+  path: string = '';
   constructor(private router: Router) {
-    router.events.pipe(filter(e => e instanceof NavigationEnd)).subscribe((e: NavigationEnd) => {
-      const path = e.url.replace('/kitchen-sink', '').replace('/', '');
-      this.title = TITLES[path];
+    router.events.pipe(filter(e => e instanceof NavigationEnd)).subscribe((e: any) => {
+      this.path = e.url.replace('/kitchen-sink', '').replace('/', '');
+      this.title = TITLES[this.path] as any;
     });
   }
 }

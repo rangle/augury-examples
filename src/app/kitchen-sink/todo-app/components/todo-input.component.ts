@@ -25,7 +25,7 @@ export class TodoInputComponent {
     this.todoModel = new TodoModel();
   }
 
-  onClick(logMessage) {
+  onClick(logMessage: any) {
     const tm = new TodoModel();
     tm.title = logMessage.value;
     this.todoService.addTodo(tm);

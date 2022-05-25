@@ -10,7 +10,7 @@ import {Component} from '@angular/core';
   `
 })
 export default class NgForDirective {
-  private names = [
+  names = [
     'John',
     'Sam',
     'Mike',

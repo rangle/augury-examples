@@ -24,8 +24,8 @@ import { FormControl, FormGroup } from '@angular/forms';
   `
 })
 export class MyFormComponent {
-  private email: FormControl = new FormControl();
-  private password: FormControl = new FormControl();
+  email: FormControl = new FormControl();
+  password: FormControl = new FormControl();
   onSubmit() {
     console.log(this.email, this.password);
   }

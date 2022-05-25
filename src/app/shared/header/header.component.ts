@@ -7,7 +7,7 @@ import { NavItem } from '../nav-item';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  @Input() navItems: NavItem[];
+  @Input() navItems: NavItem[] = [];
 
   constructor() { }
 

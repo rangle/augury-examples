@@ -15,7 +15,7 @@ export class Component4 {
   service1Value: string;
   service4Value: string;
 
-  constructor(private s1: Service1, @Inject(Service4) private s4) {
+  constructor(private s1: Service1, @Inject(Service4) private s4: Service4) {
     this.service1Value = s1.value;
     this.service4Value = s4.value;
   }

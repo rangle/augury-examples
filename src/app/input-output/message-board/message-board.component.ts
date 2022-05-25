@@ -12,5 +12,5 @@ import { Component, Input } from '@angular/core';
   styles: []
 })
 export class MessageBoardComponent {
-  @Input() message: string;
+  @Input() message: string = '';
 }

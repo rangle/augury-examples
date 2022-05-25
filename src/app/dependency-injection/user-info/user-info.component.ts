@@ -12,7 +12,7 @@ import { NewUserService } from '../new-user.service';
 })
 export class UserInfoComponent {
 
-  userInfo;
+  userInfo: any;
 
   constructor(private newUserService: NewUserService) {
     this.newUserService.getStream().subscribe(

@@ -7,6 +7,7 @@ import {Component, Input, Output} from '@angular/core';
     template: `<p>{{attrIn}}</p>`
 })
 export class MetadataFromArray {
+  @Input() attrIn: any;
 }
 
 @Component({
@@ -26,6 +27,7 @@ export class MetadataFromDecorator {
     template: `<p>{{attrIn}}</p>`
 })
 export class MetadataFromArrayWithCustomName {
+  @Input() attrIn: any;
 }
 
 @Component({

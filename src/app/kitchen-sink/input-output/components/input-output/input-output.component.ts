@@ -6,8 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./input-output.component.css']
 })
 export class InputOutputComponent {
-  message: string;
-  name: string;
+  message: string = '';
+  name: string = '';
   num: number;
   parentCount: number;
   isOn = false;
@@ -22,7 +22,7 @@ export class InputOutputComponent {
     this.parentCount = val;
   }
 
-  toggle(newState) {
+  toggle(newState: boolean) {
     if (!this.isDisabled) {
       this.isOn = newState;
     }

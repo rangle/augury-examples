@@ -19,7 +19,7 @@ import {
   `
 })
 export class StressRecItem {
-  @Input() tree: Array<any>;
+  @Input() tree: Array<any> = [];
 }
 
 @Component({
@@ -46,19 +46,18 @@ export class StressRecItem {
   `
 })
 export class StressTesterComponent {
-  private branchingFactor: FormControl = new FormControl();
-  private depth: FormControl = new FormControl();
+  branchingFactor: FormControl = new FormControl();
+  depth: FormControl = new FormControl();
+  tree: Array<any> = [];
 
-  private tree: Array<any>;
-
-  private onSubmit() {
+  onSubmit() {
     const branchingFactor = this.branchingFactor.value;
     const depth = this.depth.value;
 
     let accum = [];
     let i = depth;
     while (i--) {
-      const innerAccum = [];
+      const innerAccum: any[] = [];
 
       let j = branchingFactor;
       while (j--) {

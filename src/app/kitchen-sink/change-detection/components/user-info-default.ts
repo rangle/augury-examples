@@ -19,5 +19,10 @@ import {User} from '../models/user';
     </div>`
 })
 export class UserInfoDefault {
-  @Input() user: User;
+  @Input() user: User = {
+    id: 0,
+    email: '',
+    isOnline: false,
+    name: ''
+  };
 }
